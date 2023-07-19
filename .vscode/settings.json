@@ -1,0 +1,77 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": false, // required
+  "editor.formatOnType": false, // required
+  "editor.formatOnSave": true, // optional
+  "editor.formatOnSaveMode": "file", // required to format on save
+  "files.autoSave": "onFocusChange",
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#4dbbe2",
+    "activityBar.background": "#4dbbe2",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#c01f96",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "commandCenter.border": "#15202b99",
+    "sash.hoverBorder": "#4dbbe2",
+    "statusBar.background": "#23a9da",
+    "statusBar.foreground": "#15202b",
+    "statusBarItem.hoverBackground": "#1c87ae",
+    "statusBarItem.remoteBackground": "#23a9da",
+    "statusBarItem.remoteForeground": "#15202b",
+    "titleBar.activeBackground": "#23a9da",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.inactiveBackground": "#23a9da99",
+    "titleBar.inactiveForeground": "#15202b99"
+  },
+  "peacock.color": "#23a9da", // optional but recommended
+  "better-comments.multilineComments": true,
+  "better-comments.highlightPlainText": false,
+  "better-comments.tags": [
+    {
+      "tag": "!",
+      "color": "#FF2D00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "?",
+      "color": "#3498DB",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "//",
+      "color": "#8A33FD",
+      "strikethrough": true,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "todo",
+      "color": "#FF8C00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "*",
+      "color": "#98C379",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    }
+  ]
+}
