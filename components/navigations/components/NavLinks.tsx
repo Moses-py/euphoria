@@ -5,7 +5,7 @@ const NavLinks = () => {
     <ul className="flex justify-center items-center gap-[2.5rem] font-light">
       <li>
         <Link
-          href={""}
+          href={"/shop"}
           className="text-base text-gray-1 tracking-wider hover:text-gray-2 transition-all ease-in"
         >
           Shop

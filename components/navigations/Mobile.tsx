@@ -14,7 +14,7 @@ const Mobile = () => {
         nav ? "left-0 block" : "left-[-150%]"
       } fixed top-0 transition-all duration-300 ease-in z-50`}
     >
-      <div className="h-[100svh] w-[320px] bg-gray-2 px-5 py-8">
+      <div className="h-[100svh] w-[320px] bg-gray-3 px-5 py-8">
         <div className="flex justify-between items-center">
           <Logo />
           <ActionButton icon="close" onclick={toggleNav} />
@@ -24,7 +24,7 @@ const Mobile = () => {
             <li className="text-gray-600">
               <Link
                 className="text-sm text-gray-600 tracking-wider hover:text-gray-2 transition-all ease-in"
-                href="/"
+                href="/shop"
               >
                 Shop
               </Link>
