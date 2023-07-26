@@ -18,28 +18,18 @@ const Card = ({ type, img, category }: CardProps) => {
           alt={img}
           width={500}
           height={750}
-          className="min-w-[200px] min-h-[300px] rounded-md"
+          className="min-w-[150px] min-h-[200px] rounded-md"
         />
-        <div className="flex justify-between items-center">
-          <div>
-            <p className="font-bold text-black mt-[2rem] font-sans text-lg">
-              {type}
-            </p>
-            <Link
-              href=""
-              className="font-light underline text-black mt-1 font-sans text-md"
-            >
-              Explore now
-            </Link>
-          </div>
-          <div>
-            <Image
-              src="/icons/right.png"
-              alt="icon right"
-              width={25}
-              height={25}
-            />
-          </div>
+        <div>
+          <p className="font-bold text-black mt-[2rem] font-sans text-md sm:text-lg">
+            {type}
+          </p>
+          <Link
+            href=""
+            className="font-light underline text-black mt-1 font-sans text-sm"
+          >
+            Explore now
+          </Link>
         </div>
       </div>
     </>

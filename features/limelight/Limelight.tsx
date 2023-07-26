@@ -5,7 +5,7 @@ import ProductCard, {
 
 const limelights: ProductCardProps[] = [
   {
-    name: "Black sweatshirt with vine",
+    name: "Black sweatshirt",
     price: "59.99",
     img: "/figma/limelight/limelight_1",
     brand: "H&M",
@@ -31,11 +31,11 @@ const limelights: ProductCardProps[] = [
 ];
 const Limelight = () => {
   return (
-    <section className="mt-[5rem] p-5">
+    <section className="mt-[5rem] p-4">
       <div className="container">
         <Title>In the limelight</Title>
 
-        <div className="grid lg:grid-cols-4 sm:grid-cols-2 gap-[2rem] mt-[2rem] md:mt-[3rem]">
+        <div className="grid lg:grid-cols-4 grid-cols-2 gap-[1rem] xs:gap-[2rem] mt-[2rem] md:mt-[3rem]">
           {limelights.map((item, index) => {
             return (
               <ProductCard

@@ -3,15 +3,15 @@ import Card from "../components/Card";
 
 const women_category = [
   {
-    type: "Hoodies & Sweatshirts",
+    type: "Hoodies",
     img: "category_women_1",
   },
   {
-    type: "Coats & Parkas",
+    type: "Parkas",
     img: "category_women_2",
   },
   {
-    type: "Tees & T-shirts",
+    type: "Tops",
     img: "category_women_3",
   },
   {
@@ -22,11 +22,11 @@ const women_category = [
 
 const CategoryWomen = () => {
   return (
-    <section className="mt-[5rem] p-5">
+    <section className="mt-[5rem] p-4">
       <div className="container">
         <Title>Categories for women</Title>
 
-        <div className="grid lg:grid-cols-4 sm:grid-cols-2 gap-[2rem] mt-[2rem] md:mt-[3rem]">
+        <div className="grid lg:grid-cols-4 grid-cols-2 gap-[1rem] xs:gap-[2rem] mt-[2rem] md:mt-[3rem]">
           {women_category.map((item, index) => {
             return (
               <Card

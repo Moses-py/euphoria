@@ -19,7 +19,7 @@ const men_category = [
     img: "category_men_4",
   },
   {
-    type: "Hoodies & sweatshirts",
+    type: "Hoodies",
     img: "category_men_5",
   },
   {
@@ -38,11 +38,11 @@ const men_category = [
 
 const CategoryMen = () => {
   return (
-    <section className="mt-[5rem] p-5">
+    <section className="mt-[5rem] p-4">
       <div className="container">
         <Title>Categories for men</Title>
 
-        <div className="grid lg:grid-cols-4 sm:grid-cols-2 gap-[2rem] mt-[2rem] md:mt-[3rem]">
+        <div className="grid lg:grid-cols-4 grid-cols-2 gap-[1rem] xs:gap-[2rem] mt-[2rem] md:mt-[3rem]">
           {men_category.map((item, index) => {
             return (
               <Card
