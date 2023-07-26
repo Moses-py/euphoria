@@ -1,5 +1,16 @@
+import Navbar from "@/components/navigations/Navbar";
+import Shopboard from "./features/Shopboard";
+
 const Shop = () => {
-  return <div>Shop</div>;
+  return (
+    <>
+      <main>
+        <Navbar />
+        <hr />
+        <Shopboard />
+      </main>
+    </>
+  );
 };
 
 export default Shop;

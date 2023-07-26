@@ -16,7 +16,7 @@ const ProductCard = ({ name, img, brand, price }: ProductCardProps) => {
           alt={img}
           width={200}
           height={300}
-          className="min-w-[150px] min-h-[200px] rounded-md"
+          className="w-full min-w-[150px] min-h-[200px] rounded-md"
         />
         <div className="flex justify-between items-center">
           <div>

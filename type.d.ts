@@ -27,14 +27,14 @@ type Properties = {
   style: Style;
 };
 
-type Sizes = "XS" | "S" | "M" | "L" | "XL";
+type Sizes = "XS" | "S" | "M" | "L" | "XL" | "XXS" | "3XL" | "4XL" | "XXl";
 type Gender = "male" | "female";
 type Fabric = "cotton" | "wool" | "satin" | "Latex";
 type Pattern = "printed" | "plain";
 type Fit = "regular-fit" | "loose-fit" | "tight-fit";
 type Neck = "round-neck" | "v-necked";
 type Sleeve = "long" | "short" | "armless";
-type Style = "casual" | "business" | "party";
+type Style = "Casual" | "Business" | "Party" | "Classic" | "Sports" | "Elegant";
 type Brand = "Nike" | "H&M" | "Levi's" | "US Polo" | "Puma";
 type Category =
   | "Shirts"

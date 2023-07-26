@@ -18,7 +18,7 @@ const Card = ({ type, img, category }: CardProps) => {
           alt={img}
           width={500}
           height={750}
-          className="min-w-[150px] min-h-[200px] rounded-md"
+          className="w-full min-w-[150px] min-h-[200px] rounded-md"
         />
         <div>
           <p className="font-bold text-black mt-[2rem] font-sans text-md sm:text-lg">
