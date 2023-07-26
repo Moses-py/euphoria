@@ -3,6 +3,7 @@ export const content = [
   "./pages/**/*.{js,ts,jsx,tsx,mdx}",
   "./components/**/*.{js,ts,jsx,tsx,mdx}",
   "./app/**/*.{js,ts,jsx,tsx,mdx}",
+  "./features/**/*.{js,ts,jsx,tsx,mdx}",
 ];
 export const theme = {
   fontSize: {
@@ -28,6 +29,9 @@ export const theme = {
   fontFamily: {
     serif: ["var(--font-core_sans)"],
     sans: ["var(--font-causten)"],
+  },
+  container: {
+    center: true,
   },
   extend: {
     colors: {

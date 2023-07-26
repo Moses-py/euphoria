@@ -1,41 +1,31 @@
-import Button from "@/components/button/Button";
-import Icon from "@/components/button/Icon";
-import Title from "@/components/title/Title";
-import H1 from "@/components/typography/H1";
-import H2 from "@/components/typography/H2";
-import H3 from "@/components/typography/H3";
-import P from "@/components/typography/P";
+import Footer from "@/components/footer/Footer";
+import Navbar from "@/components/navigations/Navbar";
+
+import About from "@/features/about/About";
+import Arrival from "@/features/arrival/Arrival";
+import Brand from "@/features/brands/Brand";
+import CategoryMen from "@/features/categories/men/CategoryMen";
+import CategoryWomen from "@/features/categories/women/CategoryWomen";
+import Feedback from "@/features/feedback/Feedback";
+import Hero from "@/features/hero/Hero";
+import Limelight from "@/features/limelight/Limelight";
+import SavingZone from "@/features/savings_zone/SavingZone";
 
 export default function Home() {
   return (
-    <main className="p-4">
+    <main>
       <div>
-        <H1>Best interest attires</H1>
-        <H2>Big Saving Zone</H2>
-        <H3>UPTO 50% OFF</H3>
-        <P classname="font-[600]">UPTO 50% OFF</P>
-        <Title>New Arrivals</Title>
-        <Title>Big Saving Zone</Title>
-        <Button
-          variant={"filled"}
-          size={"sm"}
-          icon={<Icon icon="/icons/alert-triangle.svg" />}
-        >
-          Add item
-        </Button>
-        <Button variant={"outline"} size={"sm"}>
-          Order up
-        </Button>
-        <Button
-          variant={"filled"}
-          size={"lg"}
-          icon={<Icon icon="/icons/alert-triangle.svg" />}
-        >
-          Order up
-        </Button>
-        <Button variant={"outline"} size={"lg"}>
-          Order up
-        </Button>
+        <Navbar />
+        <Hero />
+        <About />
+        <Arrival />
+        <SavingZone />
+        <CategoryMen />
+        <CategoryWomen />
+        <Brand />
+        <Limelight />
+        <Feedback />
+        <Footer />
       </div>
     </main>
   );

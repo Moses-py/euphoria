@@ -6,25 +6,25 @@
   "editor.formatOnSaveMode": "file", // required to format on save
   "files.autoSave": "onFocusChange",
   "workbench.colorCustomizations": {
-    "activityBar.activeBackground": "#4dbbe2",
-    "activityBar.background": "#4dbbe2",
+    "activityBar.activeBackground": "#daf135",
+    "activityBar.background": "#daf135",
     "activityBar.foreground": "#15202b",
     "activityBar.inactiveForeground": "#15202b99",
-    "activityBarBadge.background": "#c01f96",
+    "activityBarBadge.background": "#0c9eb3",
     "activityBarBadge.foreground": "#e7e7e7",
     "commandCenter.border": "#15202b99",
-    "sash.hoverBorder": "#4dbbe2",
-    "statusBar.background": "#23a9da",
+    "sash.hoverBorder": "#daf135",
+    "statusBar.background": "#c9e310",
     "statusBar.foreground": "#15202b",
-    "statusBarItem.hoverBackground": "#1c87ae",
-    "statusBarItem.remoteBackground": "#23a9da",
+    "statusBarItem.hoverBackground": "#9fb30d",
+    "statusBarItem.remoteBackground": "#c9e310",
     "statusBarItem.remoteForeground": "#15202b",
-    "titleBar.activeBackground": "#23a9da",
+    "titleBar.activeBackground": "#c9e310",
     "titleBar.activeForeground": "#15202b",
-    "titleBar.inactiveBackground": "#23a9da99",
+    "titleBar.inactiveBackground": "#c9e31099",
     "titleBar.inactiveForeground": "#15202b99"
   },
-  "peacock.color": "#23a9da", // optional but recommended
+  "peacock.color": "#c9e310", // optional but recommended
   "better-comments.multilineComments": true,
   "better-comments.highlightPlainText": false,
   "better-comments.tags": [
