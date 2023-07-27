@@ -50,7 +50,7 @@ const Filter = () => {
     <div
       className={`absolute left-[-150%] lg:left-0 lg:relative lg:block md:w-[450px] xs:w-[320px] w-[250px] z-30 mb-5 bg-white ${
         filter ? "left-[0%]" : "left-[-150%] lg:relative"
-      } transition-all ease-in duration-300 overflow-x-auto`}
+      } transition-all ease-in duration-300`}
     >
       <div className="border-r border-b border-l">
         {/* Heading */}

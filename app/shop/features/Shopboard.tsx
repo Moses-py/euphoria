@@ -1,18 +1,17 @@
-"use client";
-import { useStore } from "@/store/Store";
+import Image from "next/image";
 import Catalog from "./catalog/Catalog";
 import Filter from "./filters/Filter";
+import Link from "next/link";
 
 const Shopboard = () => {
-  const [filterToggle] = useStore((state) => [state.filterToggle]);
   return (
-    <section className="">
-      <p
-        className="px-4 py-2 border lg:hidden block w-fit float-right"
-        onClick={filterToggle}
-      >
-        Filter
-      </p>
+    <section className="scroll-smooth" id="shop">
+      <Link href="#shop" className="fixed bottom-[1rem] right-[1rem] z-40 p-0">
+        <button className="h-14 w-14 rounded-full grid place-items-center bg-gray-2">
+          <Image src="/icons/up.png" alt="up arrow" height={20} width={20} />
+        </button>
+      </Link>
+
       <div className="flex relative">
         <Filter />
         <Catalog />

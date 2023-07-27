@@ -10,28 +10,28 @@ export interface ProductCardProps {
 const ProductCard = ({ name, img, brand, price }: ProductCardProps) => {
   return (
     <>
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col gap-1 ">
         <Image
           src={`${img}.jpg`}
           alt={img}
           width={200}
           height={300}
-          className="w-full min-w-[150px] min-h-[200px] rounded-md"
+          className="w-full min-w-[150px] min-h-[200px] rounded-md border border-gray-3"
         />
         <div className="flex justify-between items-center">
           <div>
-            <p className="font-bold text-black mt-[2rem] font-sans text-md sm:text-lg">
-              {name}
+            <p className="font-bold font-serif text-primary mt-[2rem] text-sm sm:text-md">
+              {name.slice(0, 10)}...
             </p>
-            <p className="font-light underline text-black mt-1 font-sans text-sm">
+            <p className="font-light underline text-primary mt-1 font-sans text-sm">
               {brand}
             </p>
           </div>
-          {/* <div className="px-2 py-1 grid place-items-center bg-gray-3 rounded-md">
-            <p className="font-semibold text-primary font-sans text-sm">
+          <div className="px-2 py-1 grid place-items-center bg-gray-3 rounded-md">
+            <p className="font-semibold text-primary text-xs font-serif">
               ${price}
             </p>
-          </div> */}
+          </div>
         </div>
       </div>
     </>

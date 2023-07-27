@@ -11,6 +11,8 @@ interface Store {
   sizeToggle: () => void;
   filter: boolean;
   filterToggle: () => void;
+  products: CollectionItem[];
+  setProducts: (arr: CollectionItem[]) => void;
 }
 export const useStore = create<Store>((set, get) => ({
   nav: false,
@@ -18,9 +20,9 @@ export const useStore = create<Store>((set, get) => ({
     const navState = get().nav;
     set({ nav: !navState });
   },
-  priceSwitch: true,
-  styleSwitch: true,
-  sizeSwitch: true,
+  priceSwitch: false,
+  styleSwitch: false,
+  sizeSwitch: false,
   priceToggle: () => {
     const price = get().priceSwitch;
     set({ priceSwitch: !price });
@@ -33,9 +35,13 @@ export const useStore = create<Store>((set, get) => ({
     const size = get().sizeSwitch;
     set({ sizeSwitch: !size });
   },
-  filter: true,
+  filter: false,
   filterToggle: () => {
     const filterState = get().filter;
     set({ filter: !filterState });
+  },
+  products: [],
+  setProducts: (arr: CollectionItem[]) => {
+    set({ products: arr });
   },
 }));
