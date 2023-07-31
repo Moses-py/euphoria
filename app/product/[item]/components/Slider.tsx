@@ -42,14 +42,12 @@ const Slider = ({ centerSlide }: SliderProps) => {
           // }}
           options={{
             rewind: true,
-            gap: "1rem",
+            gap: "2rem",
             type: "loop",
             autoplay: false,
             pauseOnHover: true,
             pagination: false,
             speed: 500,
-            drag: true,
-            keyboard: true,
             direction: "ttb",
             height: size(),
             width: "80px",
@@ -73,7 +71,7 @@ const Slider = ({ centerSlide }: SliderProps) => {
               );
             })}
           </SplideTrack>
-          <div className="splide__arrows absolute left-[50%] bottom-[-15%] flex flex-col">
+          <div className="splide__arrows absolute left-[50%] bottom-[-20%] flex flex-col">
             <button className="splide__arrow splide__arrow--prev relative z-30">
               <Image
                 src={"/icons/down.png"}
