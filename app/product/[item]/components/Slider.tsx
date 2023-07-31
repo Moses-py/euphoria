@@ -24,7 +24,7 @@ const Slider = ({ centerSlide }: SliderProps) => {
   const size = () => {
     if (width > 630) {
       return "400px";
-    } else if (width < 630 && width > 420) {
+    } else if (width < 630 && width > 360) {
       return "300px";
     } else {
       return "270px";
