@@ -44,9 +44,9 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
               width={150}
               height={20}
             />
-            <span className="text-md text-primary">3.5</span>
+            {/* <span className="text-md text-primary">3.5</span> */}
           </div>
-          <div className="flex gap-2 items-center my-3">
+          {/* <div className="flex gap-2 items-center my-3">
             <Image
               src={"/icons/message.png"}
               alt="message icon"
@@ -54,7 +54,7 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
               height={20}
             />
             <span className="text-md text-primary">120 comments</span>
-          </div>
+          </div> */}
         </div>
         {/* Size */}
         <div className="my-8">

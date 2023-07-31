@@ -18,7 +18,7 @@ const ImageBox = ({ currentItem }: ImageBoxProps) => {
               <div className="h-full flex items-center justify-center">
                 <Slider centerSlide={currentItem} />
               </div>
-              <div className="border h-full w-full border-gray-3 rounded-3xl">
+              <div className="border h-full w-full md:w-auto border-gray-2 rounded-3xl">
                 <Image
                   src={`${currentItem!.image}.jpg`}
                   alt={currentItem!.name}
