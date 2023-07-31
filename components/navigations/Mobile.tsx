@@ -21,46 +21,46 @@ const Mobile = () => {
         </div>
         <div className="mt-[3rem]">
           <ul className="flex gap-8 flex-col font-light">
-            <li className="text-gray-600">
-              <Link
-                className="text-sm text-gray-600 tracking-wider hover:text-gray-2 transition-all ease-in"
-                href="/shop"
-              >
-                Shop
-              </Link>
-            </li>
-            <li className="text-gray-600">
-              <Link
-                className="text-sm text-gray-600 tracking-wider hover:text-gray-2 transition-all ease-in"
-                href="/"
-              >
-                Men
-              </Link>
-            </li>
-            <li className="text-gray-600">
-              <Link
-                className="text-sm text-gray-600 tracking-wider hover:text-gray-2 transition-all ease-in"
-                href="/"
-              >
-                Women
-              </Link>
-            </li>
-            <li className="text-gray-600">
-              <Link
-                className="text-sm text-gray-600 tracking-wider hover:text-gray-2 transition-all ease-in"
-                href="/"
-              >
-                Combos
-              </Link>
-            </li>
-            <li className="text-gray-600">
-              <Link
-                className="text-sm text-gray-600 tracking-wider hover:text-gray-2 transition-all ease-in"
-                href="/"
-              >
-                Joggers
-              </Link>
-            </li>
+            <Link
+              onClick={toggleNav}
+              className="text-sm text-gray-600 tracking-wider hover:text-gray-2 transition-all ease-in"
+              href="/shop"
+            >
+              Shop
+            </Link>
+
+            <Link
+              onClick={toggleNav}
+              className="text-sm text-gray-600 tracking-wider hover:text-gray-2 transition-all ease-in"
+              href="/"
+            >
+              Men
+            </Link>
+
+            <Link
+              onClick={toggleNav}
+              className="text-sm text-gray-600 tracking-wider hover:text-gray-2 transition-all ease-in"
+              href="/"
+            >
+              Women
+            </Link>
+
+            <Link
+              onClick={toggleNav}
+              className="text-sm text-gray-600 tracking-wider hover:text-gray-2 transition-all ease-in"
+              href="/"
+            >
+              Combos
+            </Link>
+
+            <Link
+              onClick={toggleNav}
+              className="text-sm text-gray-600 tracking-wider hover:text-gray-2 transition-all ease-in"
+              href="/"
+            >
+              Joggers
+            </Link>
+
             <Search theme="light" />
             <Actions hidden={true} />
           </ul>
