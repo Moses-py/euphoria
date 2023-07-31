@@ -24,10 +24,8 @@ const Slider = ({ centerSlide }: SliderProps) => {
   const size = () => {
     if (width > 630) {
       return "400px";
-    } else if (width < 630 && width > 360) {
-      return "300px";
     } else {
-      return "270px";
+      return "250px";
     }
   };
   return (
@@ -37,15 +35,9 @@ const Slider = ({ centerSlide }: SliderProps) => {
           hasTrack={false}
           tag="div"
           aria-label="items slide"
-          // onActive={(slide) => {
-          //   console.log(slide);
-          // }}
           options={{
-            rewind: true,
-            gap: "2rem",
-            type: "loop",
+            gap: "1rem",
             autoplay: false,
-            pauseOnHover: true,
             pagination: false,
             speed: 500,
             direction: "ttb",
@@ -71,7 +63,7 @@ const Slider = ({ centerSlide }: SliderProps) => {
               );
             })}
           </SplideTrack>
-          <div className="splide__arrows absolute left-[50%] bottom-[-30%] flex flex-col">
+          <div className="splide__arrows absolute left-[50%] bottom-[-20%] flex flex-col">
             <button className="splide__arrow splide__arrow--prev relative z-30">
               <Image
                 src={"/icons/down.png"}

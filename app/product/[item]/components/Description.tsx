@@ -8,7 +8,7 @@ interface DescriptionProps {
 const Description = ({ item }: DescriptionProps) => {
   return (
     <>
-      <section className="mt-[1rem] container p-3 xl:p-[3rem]">
+      <section className="mt-[1rem] container p-3 xl:p-[1.5rem]">
         <Title>Product Description</Title>
         <div className="grid md:grid-cols-2 gap-8 my-[1rem]">
           <div className="flex flex-col gap-8">

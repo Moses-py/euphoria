@@ -10,7 +10,7 @@ interface ImageBoxProps {
 const ImageBox = ({ currentItem }: ImageBoxProps) => {
   return (
     <>
-      <div className="container p-3 xl:p-[3rem]">
+      <div className="container p-3 xl:p-[1.5rem]">
         {currentItem && (
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Image */}

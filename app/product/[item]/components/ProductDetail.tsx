@@ -10,7 +10,7 @@ interface ProductDetailProps {
 const ProductDetail = ({ product }: ProductDetailProps) => {
   return (
     <>
-      <div className="font-sans p-3 xl:p-[3rem]">
+      <div className="font-sans p-3 xl:p-[1.5rem]">
         {/* Navigation */}
         <div className=" hidden text-primary font-sans text-md xs:flex gap-1">
           <p className="font-light">Shop</p>
