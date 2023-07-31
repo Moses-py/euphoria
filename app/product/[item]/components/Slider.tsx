@@ -71,7 +71,7 @@ const Slider = ({ centerSlide }: SliderProps) => {
               );
             })}
           </SplideTrack>
-          <div className="splide__arrows absolute left-[50%] bottom-[-20%] flex flex-col">
+          <div className="splide__arrows absolute left-[50%] bottom-[-30%] flex flex-col">
             <button className="splide__arrow splide__arrow--prev relative z-30">
               <Image
                 src={"/icons/down.png"}
