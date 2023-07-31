@@ -24,8 +24,10 @@ const Slider = ({ centerSlide }: SliderProps) => {
   const size = () => {
     if (width > 630) {
       return "400px";
+    } else if (width < 630 && width > 420) {
+      return "320px";
     } else {
-      return "250px";
+      return "270px";
     }
   };
   return (
@@ -35,9 +37,15 @@ const Slider = ({ centerSlide }: SliderProps) => {
           hasTrack={false}
           tag="div"
           aria-label="items slide"
+          // onActive={(slide) => {
+          //   console.log(slide);
+          // }}
           options={{
-            gap: "1rem",
+            rewind: true,
+            gap: "2rem",
+            type: "loop",
             autoplay: false,
+            pauseOnHover: true,
             pagination: false,
             speed: 500,
             direction: "ttb",

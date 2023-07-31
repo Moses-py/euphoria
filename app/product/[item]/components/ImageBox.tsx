@@ -14,11 +14,11 @@ const ImageBox = ({ currentItem }: ImageBoxProps) => {
         {currentItem && (
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Image */}
-            <div className="flex sm:items-center justify-center lg:justify-end gap-2">
-              <div className="h-full">
+            <div className="flex lg:justify-end gap-2 w-full">
+              <div className="h-full flex items-center justify-center">
                 <Slider centerSlide={currentItem} />
               </div>
-              <div className="border h-full border-gray-3 rounded-3xl">
+              <div className="border h-full w-full border-gray-3 rounded-3xl">
                 <Image
                   src={`${currentItem!.image}.jpg`}
                   alt={currentItem!.name}
