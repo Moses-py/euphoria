@@ -4,6 +4,8 @@ import PriceRangeSlider from "./components/PriceSlider";
 import Sizebox from "./components/Sizebox";
 import { useStore } from "@/store/Store";
 import IconImage from "./components/IconImage";
+import Button from "@/components/button/Button";
+import ColorBox from "./components/ColorBox";
 
 const categories: Category[] = [
   "Shirts",
@@ -33,26 +35,30 @@ const Filter = () => {
     priceSwitch,
     styleSwitch,
     sizeSwitch,
+    colorSwitch,
     priceToggle,
     styleToggle,
     sizeToggle,
+    colorToggle,
     filter,
   ] = useStore((state) => [
     state.priceSwitch,
     state.sizeSwitch,
     state.styleSwitch,
+    state.colorSwitch,
     state.priceToggle,
     state.styleToggle,
     state.sizeToggle,
+    state.colorToggle,
     state.filter,
   ]);
   return (
     <div
-      className={`absolute left-[-150%] lg:left-0 lg:relative lg:block md:w-[450px] xs:w-[320px] w-[250px] z-30 mb-5 bg-white ${
+      className={`absolute h-full left-[-150%] lg:left-0 lg:relative lg:block md:w-[450px] xs:w-[320px] w-[250px] z-30 mb-5 bg-white ${
         filter ? "left-[0%]" : "left-[-150%] lg:relative"
       } transition-all ease-in duration-300`}
     >
-      <div className="border-r border-b border-l">
+      <form className="border-r border-b border-l">
         {/* Heading */}
         <div className="flex justify-between items-center p-5 border-b">
           <h3 className="md:text-lg text-base text-gray-1 font-serif font-[600]">
@@ -86,6 +92,34 @@ const Filter = () => {
               );
             })}
           </ul>
+        </div>
+        {/* Colors */}
+        <div className="w-full my-4">
+          <div className="flex justify-between items-center p-5 border-b border-t">
+            <h3 className="md:text-lg text-base text-gray-1 font-serif font-[600]">
+              Colors
+            </h3>
+            <IconImage
+              classname="cursor-pointer"
+              onclick={colorToggle}
+              icon={colorSwitch ? "up" : "down"}
+            />
+          </div>
+          <div
+            className={`my-5 ${
+              !colorSwitch ? "hidden" : "block"
+            } grid grid-cols-3 gap-4 p-4`}
+          >
+            <ColorBox color="red" />
+            <ColorBox color="white" />
+            <ColorBox color="black" />
+            <ColorBox color="blue" />
+            <ColorBox color="yellow" />
+            <ColorBox color="green" />
+            <ColorBox color="gray" />
+            <ColorBox color="orange" />
+            <ColorBox color="purple" />
+          </div>
         </div>
         {/* Price */}
         <div className="w-full my-4">
@@ -162,7 +196,12 @@ const Filter = () => {
             </ul>
           </div>
         </div>
-      </div>
+        <div className="my-3 p-4">
+          <Button type="button" variant={"filled"} size={"lg"}>
+            Add filter(s)
+          </Button>
+        </div>
+      </form>
     </div>
   );
 };

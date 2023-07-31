@@ -5,15 +5,26 @@ type ButtonProps = {
   variant: ButtonVariant;
   size: ButtonSize;
   icon?: React.ReactNode;
+  classname?: string;
+  type: ButtonType;
 };
-
+type ButtonType = "submit" | "button" | "reset";
 type ButtonVariant = "outline" | "filled";
 type ButtonSize = "sm" | "lg";
-const Button = ({ children, variant, size = "sm", icon }: ButtonProps) => {
+const Button = ({
+  children,
+  variant,
+  size = "sm",
+  icon,
+  classname,
+  type,
+}: ButtonProps) => {
   return (
     // todo: Optimize button flex alignment when icon is provided
     <button
+      type={type}
       className={`
+        ${classname}
         ${
           variant === "filled"
             ? "bg-button-primary-enabled text-white"

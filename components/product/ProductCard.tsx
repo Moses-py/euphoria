@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export interface ProductCardProps {
   name: string;
@@ -10,25 +11,28 @@ export interface ProductCardProps {
 const ProductCard = ({ name, img, brand, price }: ProductCardProps) => {
   return (
     <>
-      <div className="flex flex-col gap-1 ">
+      <div className="flex flex-col gap-1">
         <Image
           src={`${img}.jpg`}
           alt={img}
           width={200}
           height={300}
-          className="w-full min-w-[150px] min-h-[200px] rounded-md border border-gray-3"
+          className="w-full h-full rounded-md border border-gray-3"
         />
-        <div className="flex justify-between items-center">
-          <div>
-            <p className="font-bold font-serif text-primary mt-[2rem] text-sm sm:text-md">
-              {name.slice(0, 10)}...
-            </p>
-            <p className="font-light underline text-primary mt-1 font-sans text-sm">
+        <div className=" justify-between items-center">
+          <div className="my-2">
+            <Link
+              href={`/product/${name}`}
+              className="font-bold font-sans text-primary mt-[2rem] text-base sm:text-md"
+            >
+              {name}
+            </Link>
+            <p className="font-light text-primary mt-1 font-sans text-sm">
               {brand}
             </p>
           </div>
-          <div className="px-2 py-1 grid place-items-center bg-gray-3 rounded-md">
-            <p className="font-semibold text-primary text-xs font-serif">
+          <div className="p-2 my-2 grid place-items-center bg-gray-3 rounded-md">
+            <p className="font-semibold text-primary text-base font-sans">
               ${price}
             </p>
           </div>

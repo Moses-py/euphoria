@@ -2,6 +2,7 @@ import Image from "next/image";
 import Catalog from "./catalog/Catalog";
 import Filter from "./filters/Filter";
 import Link from "next/link";
+import Footer from "@/components/footer/Footer";
 
 const Shopboard = () => {
   return (
@@ -16,6 +17,7 @@ const Shopboard = () => {
         <Filter />
         <Catalog />
       </div>
+      <Footer />
     </section>
   );
 };

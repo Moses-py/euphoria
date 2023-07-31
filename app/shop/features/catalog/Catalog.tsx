@@ -2,10 +2,12 @@
 import { useEffect, useState } from "react";
 import ProductCard from "@/components/product/ProductCard";
 import { useStore } from "@/store/Store";
+import Image from "next/image";
 const Catalog = () => {
-  const [filterToggle, products] = useStore((state) => [
+  const [filterToggle, products, filter] = useStore((state) => [
     state.filterToggle,
     state.products,
+    state.filter,
   ]);
   const [count, setCount] = useState(10);
   const [allProducts, setAllProducts] = useState<CollectionItem[]>([]);
@@ -27,7 +29,19 @@ const Catalog = () => {
           className="px-2 xs:px-4 py-1 border lg:hidden block w-fit float-right font-sans rounded-md cursor pointer"
           onClick={filterToggle}
         >
-          Filter
+          {filter ? (
+            <>
+              <Image
+                src="/icons/close.png"
+                alt="close button"
+                width={20}
+                height={20}
+                className="m-[0.13rem]"
+              />
+            </>
+          ) : (
+            <span>Filter</span>
+          )}
         </button>
       </div>
       <hr />
@@ -54,7 +68,7 @@ const Catalog = () => {
           </p>
         ) : (
           <button
-            className="py-8 border border-gray-2 font-sans font-semibold text-primary text-base rounded-md grid place-items-center w-full hover:bg-gray-2 transition-all ease-in duration-200"
+            className="py-5 border border-gray-2 font-sans font-semibold text-primary text-base rounded-md grid place-items-center w-full hover:bg-gray-2 transition-all ease-in duration-200"
             onClick={() => setCount((prev) => prev + 10)}
           >
             Show more

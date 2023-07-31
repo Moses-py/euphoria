@@ -10,12 +10,15 @@ const Hero = () => {
         hasTrack={false}
         tag="section"
         aria-label="My Favorite Images"
+        // onActive={(slide) => {
+        //   console.log(slide);
+        // }}
         options={{
           rewind: true,
           gap: "1rem",
           type: "loop",
           autoplay: true,
-          pauseOnHover: false,
+          pauseOnHover: true,
           pagination: false,
           speed: 500,
           drag: true,
