@@ -26,7 +26,7 @@ const feedbacks = [
 const Feedback = () => {
   return (
     <section className="mt-[5rem] p-5">
-      <div className="container">
+      <div className="sm:container">
         <Title>Feedback</Title>
 
         <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-[2rem] mt-[2rem] md:mt-[3rem]">

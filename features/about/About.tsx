@@ -5,7 +5,7 @@ import Link from "next/link";
 const About = () => {
   return (
     <section className="mt-[5rem] p-5">
-      <div className="grid sm:grid-cols-2 gap-6 container">
+      <div className="grid sm:grid-cols-2 gap-6 sm:container">
         <div className="relative h-full w-full">
           <Image
             src={"/figma/card_1.jpg"}

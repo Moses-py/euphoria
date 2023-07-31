@@ -53,7 +53,7 @@ const zoneData: ZoneCardProps[] = [
 const SavingZone = () => {
   return (
     <section className="p-5 w-full">
-      <div className="container w-full">
+      <div className="sm:container w-full">
         <Title>Big savings zone</Title>
         <div className="my-[3rem] w-full">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full">

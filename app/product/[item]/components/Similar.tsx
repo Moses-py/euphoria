@@ -17,7 +17,7 @@ const Similar = () => {
 
   return (
     <>
-      <div className="container my-[1rem] p-3 xl:p-[1.5rem]">
+      <div className="sm:container my-[1rem] p-3 xl:p-[1.5rem]">
         <Title>Similar Products</Title>
         <div className="grid lg:grid-cols-4 grid-cols-2 gap-[1rem] xs:gap-[2rem] mt-[2rem] md:mt-[3rem]">
           {random &&

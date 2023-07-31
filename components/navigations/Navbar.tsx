@@ -9,7 +9,7 @@ const Navbar = () => {
   const [toggleNav, nav] = useStore((state) => [state.toggleNav, state.nav]);
 
   return (
-    <div className="container font-sans px-2 py-4 flex justify-between items-center relative w-full">
+    <div className="sm:container font-sans px-2 py-4 flex justify-between items-center relative w-full">
       {/* Logo */}
       <Logo />
       <Desktop />

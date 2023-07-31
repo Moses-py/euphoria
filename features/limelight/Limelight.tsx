@@ -32,7 +32,7 @@ const limelights: ProductCardProps[] = [
 const Limelight = () => {
   return (
     <section className="mt-[5rem] p-4">
-      <div className="container">
+      <div className="sm:container">
         <Title>In the limelight</Title>
 
         <div className="grid lg:grid-cols-4 grid-cols-2 gap-[1rem] xs:gap-[2rem] mt-[2rem] md:mt-[3rem]">

@@ -12,7 +12,7 @@ const arrivalData = [
 const Arrival = () => {
   return (
     <section className="mt-[5rem] p-5">
-      <div className="container">
+      <div className="sm:container">
         <Title>New Arrivals</Title>
         {/* Picture list */}
         <div className="flex my-[2rem] md:my-[3rem] gap-5 px-6 overflow-x-auto">

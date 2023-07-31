@@ -23,7 +23,7 @@ const women_category = [
 const CategoryWomen = () => {
   return (
     <section className="mt-[5rem] p-4">
-      <div className="container">
+      <div className="sm:container">
         <Title>Categories for women</Title>
 
         <div className="grid lg:grid-cols-4 grid-cols-2 gap-[1rem] xs:gap-[2rem] mt-[2rem] md:mt-[3rem]">
