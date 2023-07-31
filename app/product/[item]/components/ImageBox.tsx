@@ -15,21 +15,21 @@ const ImageBox = ({ currentItem }: ImageBoxProps) => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Image */}
             <div className="flex sm:items-center justify-center lg:justify-end gap-2">
-              <div className="">
+              <div className="h-full">
                 <Slider centerSlide={currentItem} />
               </div>
-              <div className="border border-gray-3 rounded-3xl">
+              <div className="border h-full border-gray-3 rounded-3xl">
                 <Image
                   src={`${currentItem!.image}.jpg`}
                   alt={currentItem!.name}
                   width={500}
                   height={750}
-                  className="w-full rounded-3xl"
+                  className="w-full h-full rounded-3xl"
                 />
               </div>
             </div>
             {/* Data */}
-            <div className="">
+            <div className="w-full h-full">
               <ProductDetail product={currentItem} />
             </div>
           </div>
