@@ -7,6 +7,8 @@ import { menCollectionItems, womenCollectionItems } from "@/mocks/__mocks__";
 import Description from "./components/Description";
 import Footer from "@/components/footer/Footer";
 import Similar from "./components/Similar";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ProductListing = ({ params }: { params: { item: string } }) => {
   const [itemData, setItemData] = useState<CollectionItem | undefined>();
@@ -25,6 +27,18 @@ const ProductListing = ({ params }: { params: { item: string } }) => {
   }, [params.item, products]);
   return (
     <>
+      <ToastContainer
+        position="top-center"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
       <Navbar />
       <ImageBox currentItem={itemData} />
       {itemData && <Description item={itemData} />}

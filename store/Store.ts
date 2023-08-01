@@ -15,6 +15,8 @@ interface Store {
   filterToggle: () => void;
   products: CollectionItem[];
   setProducts: (arr: CollectionItem[]) => void;
+  cart: CollectionItem[];
+  updateCart: (item: CollectionItem) => void;
 }
 export const useStore = create<Store>((set, get) => ({
   nav: false,
@@ -50,5 +52,13 @@ export const useStore = create<Store>((set, get) => ({
   products: [],
   setProducts: (arr: CollectionItem[]) => {
     set({ products: arr });
+  },
+
+  cart: [],
+  updateCart: (item: CollectionItem) => {
+    const currentCart = get().cart;
+    const updatedCart = [...currentCart, item];
+
+    set({ cart: updatedCart });
   },
 }));

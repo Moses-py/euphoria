@@ -1,13 +1,26 @@
+"use client";
 import Image from "next/image";
 import ProductSizeBox from "./Sizebox";
 import Button from "@/components/button/Button";
 import Benefits from "./Benefits";
+import { toast } from "react-toastify";
+import { useStore } from "@/store/Store";
 
 interface ProductDetailProps {
   product: CollectionItem;
 }
 
 const ProductDetail = ({ product }: ProductDetailProps) => {
+  const [updateCart] = useStore((state) => [state.updateCart]);
+
+  const onAddToCart = (item: CollectionItem) => {
+    try {
+      updateCart(item);
+      toast("Item added to cart");
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <>
       <div className="font-sans p-3 xl:p-[1.5rem]">
@@ -89,6 +102,7 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
         {/* CTA */}
         <div className="my-8 flex flex-col md:flex-row gap-4">
           <Button
+            onclick={() => onAddToCart(product)}
             variant={"filled"}
             size={"lg"}
             type={"button"}

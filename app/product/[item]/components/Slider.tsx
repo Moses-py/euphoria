@@ -9,7 +9,6 @@ import { menCollectionItems, womenCollectionItems } from "@/mocks/__mocks__";
 import { useWindowSize } from "@/hooks/useWindowSize";
 import Link from "next/link";
 import { randomizeArray } from "@/utils/randomArrayIndexGenerator";
-// import '@splidejs/react-splide/css/sea-green';
 
 interface SliderProps {
   centerSlide: CollectionItem;
@@ -37,15 +36,10 @@ const Slider = ({ centerSlide }: SliderProps) => {
           hasTrack={false}
           tag="div"
           aria-label="items slide"
-          // onActive={(slide) => {
-          //   console.log(slide);
-          // }}
           options={{
             rewind: true,
             gap: "2rem",
-            type: "loop",
             autoplay: false,
-            pauseOnHover: true,
             pagination: false,
             speed: 500,
             direction: "ttb",
@@ -72,7 +66,7 @@ const Slider = ({ centerSlide }: SliderProps) => {
             })}
           </SplideTrack>
           <div className="splide__arrows absolute left-[50%] bottom-[-20%] flex flex-col">
-            <button className="splide__arrow splide__arrow--prev relative z-30">
+            <button className="splide__arrow splide__arrow--prev relative z-20">
               <Image
                 src={"/icons/down.png"}
                 alt="left_arrow"
@@ -80,7 +74,7 @@ const Slider = ({ centerSlide }: SliderProps) => {
                 height={20}
               />
             </button>
-            <button className="splide__arrow splide__arrow--next relative z-30">
+            <button className="splide__arrow splide__arrow--next relative z-20">
               <Image
                 src={"/icons/up.png"}
                 alt="right_arrow"

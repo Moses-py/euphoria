@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import ProductCard from "@/components/product/ProductCard";
 import { useStore } from "@/store/Store";
 import Image from "next/image";
+import FilterMobile from "./components/FilterMobile";
 const Catalog = () => {
   const [filterToggle, products, filter] = useStore((state) => [
     state.filterToggle,
@@ -20,29 +21,12 @@ const Catalog = () => {
   }, [count, products]);
 
   return (
-    <div className="w-full">
-      <div className="flex justify-between items-center py-[0.93rem] lg:py-5 xs:px-5 px-2 ">
+    <div className="flex-1 w-full">
+      <div className="flex justify-between items-center py-[1rem] lg:py-5 xs:px-5 px-2 ">
         <h3 className="md:text-lg text-base text-gray-1 font-serif font-[600]">
           Shop
         </h3>
-        <button
-          className="px-2 xs:px-4 py-1 border lg:hidden block w-fit float-right font-sans rounded-md cursor pointer"
-          onClick={filterToggle}
-        >
-          {filter ? (
-            <>
-              <Image
-                src="/icons/close.png"
-                alt="close button"
-                width={20}
-                height={20}
-                className="m-[0.13rem]"
-              />
-            </>
-          ) : (
-            <span>Filter</span>
-          )}
-        </button>
+        <FilterMobile />
       </div>
       <hr />
       <div className="xs:p-5 p-2 my-[2rem]">

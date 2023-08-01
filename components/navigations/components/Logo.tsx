@@ -1,8 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-const Logo = () => {
+
+interface LogoProps {
+  onclick?: () => void;
+}
+const Logo = ({ onclick }: LogoProps) => {
   return (
-    <Link href="/">
+    <Link href="/" onClick={onclick}>
       <Image
         src={"/icons/euphoria.png"}
         alt={"euphoria logo"}

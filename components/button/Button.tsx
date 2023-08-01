@@ -7,6 +7,7 @@ type ButtonProps = {
   icon?: React.ReactNode;
   classname?: string;
   type: ButtonType;
+  onclick?: () => void;
 };
 type ButtonType = "submit" | "button" | "reset";
 type ButtonVariant = "outline" | "filled";
@@ -18,10 +19,12 @@ const Button = ({
   icon,
   classname,
   type,
+  onclick,
 }: ButtonProps) => {
   return (
     // todo: Optimize button flex alignment when icon is provided
     <button
+      onClick={onclick}
       type={type}
       className={`
         ${classname}
