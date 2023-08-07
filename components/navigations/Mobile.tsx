@@ -23,7 +23,7 @@ const Mobile = () => {
       </Drawer.Trigger>
       <Drawer.Portal>
         <Drawer.Overlay className="fixed inset-0 bg-black/40 z-40" />
-        <Drawer.Content className="bg-zinc-100 flex flex-col rounded-t-[20px] h-[70%] z-50 mt-24 fixed bottom-0 left-0 right-0 pt-[1.5rem]">
+        <Drawer.Content className="bg-zinc-100 flex flex-col rounded-t-[20px] h-[60%] z-50 mt-24 fixed bottom-0 left-0 right-0 pt-[1.5rem]">
           <div className="mx-auto w-12 h-1.5 flex-shrink-0 rounded-full bg-zinc-300 mb-4 " />
           <div className=" px-5 pb-4 overflow-y-scroll">
             <div className="flex justify-between items-center">

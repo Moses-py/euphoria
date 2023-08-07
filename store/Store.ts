@@ -1,3 +1,4 @@
+import { isItemInArray } from "@/utils/isItemInArray";
 import { create } from "zustand";
 
 interface Store {
@@ -15,9 +16,10 @@ interface Store {
   filterToggle: () => void;
   products: CollectionItem[];
   setProducts: (arr: CollectionItem[]) => void;
-  cart: CollectionItem[];
-  updateCart: (item: CollectionItem) => void;
+  cart: CartArray[];
+  updateCart: (item: CartItem, command: Command) => void;
 }
+
 export const useStore = create<Store>((set, get) => ({
   nav: false,
   toggleNav: () => {
@@ -55,10 +57,8 @@ export const useStore = create<Store>((set, get) => ({
   },
 
   cart: [],
-  updateCart: (item: CollectionItem) => {
+  updateCart: (item: CartItem, command: Command) => {
     const currentCart = get().cart;
-    const updatedCart = [...currentCart, item];
-
-    set({ cart: updatedCart });
+    set({ cart: isItemInArray(currentCart, item, command) });
   },
 }));

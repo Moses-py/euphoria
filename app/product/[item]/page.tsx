@@ -29,7 +29,7 @@ const ProductListing = ({ params }: { params: { item: string } }) => {
     <>
       <ToastContainer
         position="top-center"
-        autoClose={2000}
+        autoClose={1000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
@@ -37,7 +37,7 @@ const ProductListing = ({ params }: { params: { item: string } }) => {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-        theme="light"
+        theme="dark"
       />
       <Navbar />
       <ImageBox currentItem={itemData} />

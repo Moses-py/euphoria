@@ -12,6 +12,17 @@ type CollectionItem = {
   brand: Brand;
 };
 
+type CartItem = {
+  name: string;
+  price: string;
+  image: string;
+  selectedColor: string;
+  id: string;
+  selectedSize: Sizes | string;
+};
+
+type CartArray = CartItem[];
+
 type ItemComment = {
   author: string;
   content: string;
@@ -47,3 +58,5 @@ type Category =
   | "Skirts"
   | "Shorts"
   | "Joggers";
+
+type Command = "remove" | "add";

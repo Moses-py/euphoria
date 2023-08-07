@@ -6,25 +6,25 @@
   "editor.formatOnSaveMode": "file", // required to format on save
   "files.autoSave": "onFocusChange",
   "workbench.colorCustomizations": {
-    "activityBar.activeBackground": "#daf135",
-    "activityBar.background": "#daf135",
+    "activityBar.activeBackground": "#bd6af7",
+    "activityBar.background": "#bd6af7",
     "activityBar.foreground": "#15202b",
     "activityBar.inactiveForeground": "#15202b99",
-    "activityBarBadge.background": "#0c9eb3",
-    "activityBarBadge.foreground": "#e7e7e7",
-    "commandCenter.border": "#15202b99",
-    "sash.hoverBorder": "#daf135",
-    "statusBar.background": "#c9e310",
-    "statusBar.foreground": "#15202b",
-    "statusBarItem.hoverBackground": "#9fb30d",
-    "statusBarItem.remoteBackground": "#c9e310",
-    "statusBarItem.remoteForeground": "#15202b",
-    "titleBar.activeBackground": "#c9e310",
-    "titleBar.activeForeground": "#15202b",
-    "titleBar.inactiveBackground": "#c9e31099",
-    "titleBar.inactiveForeground": "#15202b99"
+    "activityBarBadge.background": "#f8c986",
+    "activityBarBadge.foreground": "#15202b",
+    "commandCenter.border": "#e7e7e799",
+    "sash.hoverBorder": "#bd6af7",
+    "statusBar.background": "#a739f5",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#bd6af7",
+    "statusBarItem.remoteBackground": "#a739f5",
+    "statusBarItem.remoteForeground": "#e7e7e7",
+    "titleBar.activeBackground": "#a739f5",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#a739f599",
+    "titleBar.inactiveForeground": "#e7e7e799"
   },
-  "peacock.color": "#c9e310", // optional but recommended
+  "peacock.color": "#a739f5", // optional but recommended
   "better-comments.multilineComments": true,
   "better-comments.highlightPlainText": false,
   "better-comments.tags": [
