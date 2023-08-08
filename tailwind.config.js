@@ -27,8 +27,8 @@ export const theme = {
     "2xl": "1536px",
   },
   fontFamily: {
-    serif: ["var(--font-core_sans)"],
-    sans: ["var(--font-causten)"],
+    serif: ["var(--font-causten)"],
+    sans: ["var(--font-open_sans)"],
   },
   container: {
     center: true,

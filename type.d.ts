@@ -19,6 +19,7 @@ type CartItem = {
   selectedColor: string;
   id: string;
   selectedSize: Sizes | string;
+  shipping: number;
 };
 
 type CartArray = CartItem[];
@@ -59,4 +60,5 @@ type Category =
   | "Shorts"
   | "Joggers";
 
-type Command = "remove" | "add";
+type Command = "remove" | "add" | "delete";
+type GetTotalCommand = "price" | "shipping";

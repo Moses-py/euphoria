@@ -20,6 +20,10 @@ export const isItemInArray = (
             arr.pop();
           }
           break;
+        case "delete":
+          let itemIndex = cart.indexOf(arr);
+          cart.splice(itemIndex, 1);
+          break;
         case "add":
           arr.push(item);
           isItemFound = true;

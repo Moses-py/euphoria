@@ -32,6 +32,7 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
       selectedColor: selectColor,
       id: item.id,
       selectedSize: selectSize,
+      shipping: 2.0,
     };
     try {
       setLoading(true);

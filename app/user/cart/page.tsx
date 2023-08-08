@@ -4,6 +4,8 @@ import Navbar from "@/components/navigations/Navbar";
 import Link from "next/link";
 import CartTable from "./components/CartTable";
 import { useStore } from "@/store/Store";
+import EmptyCart from "./components/EmptyCart";
+import Footer from "@/components/footer/Footer";
 
 const Cart = () => {
   const [cart] = useStore((state) => [state.cart]);
@@ -19,7 +21,7 @@ const Cart = () => {
             width={20}
             height={10}
           />
-          <p className="font-semibold">Add to Cart</p>
+          <p className="font-semibold">Cart</p>
         </div>
         <div className="font-sans text-lg my-10 text-gray-1">
           <p>
@@ -36,8 +38,10 @@ const Cart = () => {
       </div>
 
       <div className="w-full">
-        <CartTable cart={cart} />
+        {cart.length < 1 ? <EmptyCart /> : <CartTable cart={cart} />}
       </div>
+
+      <Footer />
     </div>
   );
 };

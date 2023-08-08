@@ -41,44 +41,28 @@ export const causten = localFont({
   ],
   variable: "--font-causten",
 });
-export const core_sans = localFont({
+export const open_sans = localFont({
   src: [
     {
-      path: "../public/fonts/CoreSans/Fontspring-DEMO-coresansc95.otf",
-      weight: "900",
-    },
-    {
-      path: "../public/fonts/CoreSans/Fontspring-DEMO-coresansc85.otf",
+      path: "../public/fonts/open-sans/OpenSans-ExtraBold.ttf",
       weight: "800",
     },
     {
-      path: "../public/fonts/CoreSans/Fontspring-DEMO-coresansc75.otf",
+      path: "../public/fonts/open-sans/OpenSans-Bold.ttf",
       weight: "700",
     },
     {
-      path: "../public/fonts/CoreSans/Fontspring-DEMO-coresansc65.otf",
-      weight: "600",
-    },
-    {
-      path: "../public/fonts/CoreSans/Fontspring-DEMO-coresansc55.otf",
+      path: "../public/fonts/open-sans/OpenSans-Semibold.ttf",
       weight: "500",
     },
     {
-      path: "../public/fonts/CoreSans/Fontspring-DEMO-coresansc45.otf",
+      path: "../public/fonts/open-sans/OpenSans-Regular.ttf",
       weight: "400",
     },
     {
-      path: "../public/fonts/CoreSans/Fontspring-DEMO-coresansc35.otf",
+      path: "../public/fonts/open-sans/OpenSans-Light.ttf",
       weight: "300",
     },
-    {
-      path: "../public/fonts/CoreSans/Fontspring-DEMO-coresansc25.otf",
-      weight: "200",
-    },
-    {
-      path: "../public/fonts/CoreSans/Fontspring-DEMO-coresansc15.otf",
-      weight: "100",
-    },
   ],
-  variable: "--font-core_sans",
+  variable: "--font-open_sans",
 });
