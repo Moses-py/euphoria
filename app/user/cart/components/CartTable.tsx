@@ -21,7 +21,6 @@ const CartTable = ({ cart }: CartTableProps) => {
           <li>Shipping</li>
           <li>Subtotal</li>
         </ul>
-        <p className="flex lg:hidden text-light uppercase">Details</p>
       </div>
       {/* Items */}
       <div className="flex flex-col gap-6 my-5">
