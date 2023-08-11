@@ -6,6 +6,7 @@ import CartTable from "./components/CartTable";
 import { useStore } from "@/store/Store";
 import EmptyCart from "./components/EmptyCart";
 import Footer from "@/components/footer/Footer";
+import NavIndicator from "@/components/nav_indicator/NavIndicator";
 
 const Cart = () => {
   const [cart] = useStore((state) => [state.cart]);
@@ -13,16 +14,7 @@ const Cart = () => {
     <div>
       <Navbar />
       <div className="container my-5 p-5">
-        <div className=" text-gray-1 font-sans text-md flex gap-1">
-          <p className="font-light">Home</p>
-          <Image
-            src={"/icons/right.png"}
-            alt="right icon"
-            width={20}
-            height={10}
-          />
-          <p className="font-semibold">Cart</p>
-        </div>
+        <NavIndicator indicators={["Home", "Cart"]} />
         <div className="font-sans text-lg my-10 text-gray-1">
           <p>
             Please fill in the fields below and click place order to complete

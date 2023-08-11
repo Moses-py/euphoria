@@ -19,7 +19,6 @@ const Shop = () => {
     <>
       <main>
         <Navbar />
-        <hr />
         <Shopboard />
       </main>
     </>

@@ -77,7 +77,7 @@ const CartTable = ({ cart }: CartTableProps) => {
               </div>
             </div>
             <hr className="border-gray-2 my-8 w-full" />
-            <Link href={""}>
+            <Link href={"/checkout"}>
               <Button
                 variant={"filled"}
                 size={"lg"}

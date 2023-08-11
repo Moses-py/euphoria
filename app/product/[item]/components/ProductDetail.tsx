@@ -8,6 +8,7 @@ import { useStore } from "@/store/Store";
 import { useEffect, useState } from "react";
 import Counter from "./Counter";
 import { CircleLoader } from "react-spinners";
+import NavIndicator from "@/components/nav_indicator/NavIndicator";
 
 interface ProductDetailProps {
   product: CollectionItem;
@@ -52,22 +53,10 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
     <>
       <div className="font-sans p-3 xl:p-[1.5rem]">
         {/* Navigation */}
-        <div className="hidden text-primary font-sans text-md xs:flex gap-1">
-          <p className="font-light">Shop</p>
-          <Image
-            src={"/icons/right.png"}
-            alt="right icon"
-            width={20}
-            height={20}
+        <div className="hidden xs:block">
+          <NavIndicator
+            indicators={["Home", "Shop", "Product", product.name]}
           />
-          <p className="font-light">Product</p>
-          <Image
-            src={"/icons/right.png"}
-            alt="right icon"
-            width={20}
-            height={20}
-          />
-          <p className="font-light">{product.name}</p>
         </div>
         {/* Product name */}
         <div className="my-4">

@@ -11,18 +11,19 @@ type CollectionItem = {
   sizes: Sizes[];
   brand: Brand;
 };
-
 type CartItem = {
   name: string;
   price: string;
   image: string;
   selectedColor: string;
   id: string;
-  selectedSize: Sizes | string;
+  selectedSize: Sizes;
   shipping: number;
 };
 
 type CartArray = CartItem[];
+
+type ProductSummaryItemProp = Omit<CartItem, "shipping">;
 
 type ItemComment = {
   author: string;
@@ -62,3 +63,4 @@ type Category =
 
 type Command = "remove" | "add" | "delete";
 type GetTotalCommand = "price" | "shipping";
+type Country = { country: string; states: string[] };
