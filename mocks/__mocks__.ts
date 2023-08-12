@@ -525,7 +525,7 @@ export const menCollectionItems: CollectionItem[] = [
 export const womenCollectionItems: CollectionItem[] = [
   // Sleeve women
   {
-    name: "White Pride Month ",
+    name: "White Pride Month",
     price: "39.99",
     image: "/figma/catalog/women/sleeve-women-1",
     colors: ["White", "black"],

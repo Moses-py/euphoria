@@ -18,7 +18,7 @@ const ProductSummary = () => {
             return (
               <ProductSummaryItem
                 key={index}
-                item={item[index]}
+                item={item[0]}
                 itemLength={item.length}
               />
             );

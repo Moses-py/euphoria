@@ -14,6 +14,7 @@ const CountrySelect = ({ label, required, onchange }: CountrySelectProps) => {
         {label} {required && <span className="text-red-600">*</span>}
       </label>
       <select
+        required
         onChange={onchange}
         className={` p-3 ring-1 ring-gray-3 text-gray-1 rounded-md focus:ring-1 focus:ring-gray-2 outline-none bg-light placeholder:text-gray-2 w-full`}
       >

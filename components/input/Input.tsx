@@ -1,7 +1,7 @@
 import { HTMLInputTypeAttribute } from "react";
 
 interface InputProps {
-  label: string;
+  label?: string;
   required: boolean;
   placeholder: string;
   type: HTMLInputTypeAttribute;
@@ -33,7 +33,7 @@ const Input = ({
             required={required}
             placeholder={placeholder}
             onChange={onchange}
-            className={`${classname} p-3 ring-1 ring-gray-3 rounded-md focus:ring-1 focus:ring-gray-2 outline-none bg-light placeholder:text-gray-2 w-full`}
+            className={`${classname} p-3 ring-1 ring-gray-3 rounded-md focus:ring-1 focus:ring-gray-2 outline-none bg-light placeholder:text-gray-2 placeholder:text-sm w-full`}
           />
         )}
         {variant === "textarea" && (
