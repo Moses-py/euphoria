@@ -43,7 +43,7 @@ const Mobile = () => {
                 <Link
                   onClick={toggleNav}
                   className="text-sm text-gray-600 tracking-wider hover:text-gray-2 transition-all ease-in"
-                  href="/"
+                  href="/men"
                 >
                   Men
                 </Link>
@@ -51,7 +51,7 @@ const Mobile = () => {
                 <Link
                   onClick={toggleNav}
                   className="text-sm text-gray-600 tracking-wider hover:text-gray-2 transition-all ease-in"
-                  href="/"
+                  href="/women"
                 >
                   Women
                 </Link>
@@ -59,17 +59,17 @@ const Mobile = () => {
                 <Link
                   onClick={toggleNav}
                   className="text-sm text-gray-600 tracking-wider hover:text-gray-2 transition-all ease-in"
-                  href="/"
+                  href="/categories/shirts"
                 >
-                  Combos
+                  Shirts
                 </Link>
 
                 <Link
                   onClick={toggleNav}
                   className="text-sm text-gray-600 tracking-wider hover:text-gray-2 transition-all ease-in"
-                  href="/"
+                  href="/categories/jeans"
                 >
-                  Joggers
+                  Jeans
                 </Link>
 
                 <Search theme="light" />

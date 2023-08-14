@@ -2,23 +2,21 @@
 import { useEffect, useState } from "react";
 import ProductCard from "@/components/product/ProductCard";
 import { useStore } from "@/store/Store";
-import Image from "next/image";
 import FilterMobile from "./components/FilterMobile";
-const Catalog = () => {
-  const [filterToggle, products, filter] = useStore((state) => [
-    state.filterToggle,
-    state.products,
-    state.filter,
-  ]);
+
+interface CatalogProp {
+  items: CollectionItem[];
+}
+const Catalog = ({ items }: CatalogProp) => {
   const [count, setCount] = useState(10);
   const [allProducts, setAllProducts] = useState<CollectionItem[]>([]);
 
   useEffect(() => {
     const truncProducts = () => {
-      setAllProducts(products.slice(0, count));
+      setAllProducts(items.slice(0, count));
     };
     truncProducts();
-  }, [count, products]);
+  }, [count, items]);
 
   return (
     <div className="flex-1 w-full">
@@ -46,7 +44,7 @@ const Catalog = () => {
         </div>
       </div>
       <div className={`my-5 p-4`}>
-        {count > products.length ? (
+        {count > items.length ? (
           <p className="font-semibold text-primary text-base font-sans text-center">
             That is all for now...
           </p>

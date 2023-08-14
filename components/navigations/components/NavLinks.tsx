@@ -13,7 +13,7 @@ const NavLinks = () => {
       </li>
       <li>
         <Link
-          href={""}
+          href={"/men"}
           className="text-base text-gray-1 tracking-wider hover:text-gray-2 transition-all ease-in"
         >
           Men
@@ -21,7 +21,7 @@ const NavLinks = () => {
       </li>
       <li>
         <Link
-          href={""}
+          href={"/women"}
           className="text-base text-gray-1 tracking-wider hover:text-gray-2 transition-all ease-in"
         >
           Women
@@ -29,18 +29,18 @@ const NavLinks = () => {
       </li>
       <li>
         <Link
-          href={""}
+          href={"/categories/shirts"}
           className="text-base text-gray-1 tracking-wider hover:text-gray-2 transition-all ease-in"
         >
-          Combo
+          Shirts
         </Link>
       </li>
       <li>
         <Link
-          href={""}
+          href={"/categories/jeans"}
           className="text-base text-gray-1 tracking-wider hover:text-gray-2 transition-all ease-in"
         >
-          Joggers
+          Jeans
         </Link>
       </li>
     </ul>

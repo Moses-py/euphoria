@@ -12,7 +12,9 @@ const NavIndicator = ({ indicators }: NavIndicatorProps) => {
           return (
             <>
               {index === indicators.length - 1 ? (
-                <p className="font-semibold">{indicator}</p>
+                <p className="font-semibold" key={index + "-key"}>
+                  {indicator}
+                </p>
               ) : (
                 <div key={index} className="flex gap-1">
                   <p className="font-light">{indicator}</p>

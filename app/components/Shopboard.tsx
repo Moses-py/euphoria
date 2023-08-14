@@ -1,10 +1,14 @@
+"use client";
 import Image from "next/image";
-import Catalog from "./catalog/Catalog";
-import Filter from "./filters/Filter";
+import Catalog from "../shop/features/catalog/Catalog";
+import Filter from "../shop/features/filters/Filter";
 import Link from "next/link";
 import Footer from "@/components/footer/Footer";
+import { usePathname } from "next/navigation";
+import { renderByPathname } from "@/utils/renderByPathname";
 
 const Shopboard = () => {
+  const pathname = usePathname();
   return (
     <section className="scroll-smooth" id="shop">
       <Link
@@ -18,7 +22,7 @@ const Shopboard = () => {
 
       <div className="flex relative">
         <Filter />
-        <Catalog />
+        <Catalog items={renderByPathname(pathname)} />
       </div>
       <Footer />
     </section>
