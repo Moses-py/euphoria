@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 type BGProps = {
   image: string;
@@ -36,9 +37,11 @@ const BackgroundImage = ({
         <p className="font-sans xl:text-3xl sm:text-2xl text-xl font-light">
           {description}
         </p>
-        <button className="bg-light text-black rounded-md px-[4rem] py-[0.5rem] w-fit font-sans text-lg font-light hover:bg-button-primary-focused-hover hover:text-light">
-          Shop now
-        </button>
+        <Link href={"/shop"}>
+          <button className="bg-light text-black rounded-md px-[4rem] py-[0.5rem] w-fit font-sans text-lg font-light hover:bg-button-primary-focused-hover hover:text-light">
+            Shop now
+          </button>
+        </Link>
       </div>
       <div className="absolute inset-0 bg-black opacity-20 z-20" />
     </div>

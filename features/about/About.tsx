@@ -26,7 +26,7 @@ const About = () => {
                 Up to 50% off
               </p>
               <Link
-                href="/"
+                href="/shop"
                 className="text-md lg:text-lg xl:text-xl font-semibold underline mt-3"
               >
                 Explore items
@@ -54,7 +54,7 @@ const About = () => {
                 Up to 50% off
               </p>
               <Link
-                href="/"
+                href="/shop"
                 className="text-md lg:text-lg xl:text-xl font-semibold underline mt-3"
               >
                 Explore items

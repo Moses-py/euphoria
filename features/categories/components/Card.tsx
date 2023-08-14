@@ -25,7 +25,7 @@ const Card = ({ type, img, category }: CardProps) => {
             {type}
           </p>
           <Link
-            href=""
+            href="/shop"
             className="font-light underline text-black mt-1 font-sans text-sm"
           >
             Explore now

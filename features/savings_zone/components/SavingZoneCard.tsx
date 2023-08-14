@@ -93,7 +93,7 @@ const SavingZoneCard: React.FC<ZoneCardProps> = ({
                   Up to {discount}% off
                 </p>
                 <Link
-                  href="/"
+                  href="/shirts"
                   className="text-md lg:text-lg xl:text-xl font-bold underline mt-3"
                 >
                   <button

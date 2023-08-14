@@ -110,7 +110,7 @@ const SavingZone = () => {
                   EVERYDAY wear range - Comfortable & Affordable fashion 24/7
                 </p>
                 <button className="bg-light rounded-md px-[1rem] xs:px-[2rem] py-[0.5rem] text-black w-fit">
-                  <Link href="">Shop now</Link>
+                  <Link href="/shop">Shop now</Link>
                 </button>
               </div>
             </div>
