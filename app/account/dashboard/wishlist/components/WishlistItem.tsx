@@ -26,7 +26,6 @@ const WishlistItem = ({ item }: WishlistItemProps) => {
     try {
       updateCart(cartItem, command);
       toast("Item added to cart");
-      updateWishlist(item, "delete");
     } catch (error) {
       console.log(error);
     }
@@ -41,6 +40,7 @@ const WishlistItem = ({ item }: WishlistItemProps) => {
               alt="item image"
               width={70}
               height={80}
+              className="rounded-lg"
             />
             <div className="flex flex-col gap-2">
               <p className="font-bold text-base">{item.name}</p>
@@ -70,7 +70,6 @@ const WishlistItem = ({ item }: WishlistItemProps) => {
                   alt="cancel button"
                   width={20}
                   height={20}
-                  onClick={() => updateWishlist(item, "delete")}
                   className="cursor-pointer"
                 />
               </Button>

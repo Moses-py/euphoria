@@ -18,3 +18,10 @@ export const updateWishlistCollection = (
 
   return newWishlist;
 };
+
+export const isItemInWishlist = (
+  list: ProductItemSummary[],
+  item: ProductItemSummary
+) => {
+  return list.includes(item);
+};

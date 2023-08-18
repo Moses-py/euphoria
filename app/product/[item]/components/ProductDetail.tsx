@@ -5,26 +5,41 @@ import Button from "@/components/button/Button";
 import Benefits from "./Benefits";
 import { toast } from "react-toastify";
 import { useStore } from "@/store/Store";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Counter from "./Counter";
 import { CircleLoader } from "react-spinners";
 import NavIndicator from "@/components/nav_indicator/NavIndicator";
+import { isItemInWishlist } from "@/utils/isItemInWishList";
 
 interface ProductDetailProps {
   product: CollectionItem;
 }
 
 const ProductDetail = ({ product }: ProductDetailProps) => {
-  const [updateCart, updateWishlist] = useStore((state) => [
+  const [updateCart, updateWishlist, wishlist] = useStore((state) => [
     state.updateCart,
     state.updateWishlist,
+    state.wishlist,
   ]);
   const [selectColor, setSelectColor] = useState(product.colors[0]);
   const [selectSize, setSelectSize] = useState(product.sizes[0]);
   const [count, setCount] = useState(1);
   const [openCounter, setOpenCounter] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [isInWishlist, setIsInWishlist] = useState(false);
+  const [isInWishlist, setIsInWishlist] = useState<boolean | undefined>();
+
+  useEffect(() => {
+    const productItem: ProductItemSummary = {
+      name: product.name,
+      price: product.price,
+      image: product.image,
+      selectedColor: selectColor,
+      id: product.id,
+      selectedSize: selectSize,
+    };
+    setIsInWishlist(isItemInWishlist(wishlist, productItem));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const onAddToCart = (item: CollectionItem, command: Command) => {
     const cartItem: CartItem = {
@@ -64,7 +79,7 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
     try {
       updateWishlist(wishlistItem, command);
       if (command === "add") {
-        setIsInWishlist(true);
+        setIsInWishlist(isItemInWishlist(wishlist, wishlistItem));
         toast("Item added to wishlist");
       } else {
         setIsInWishlist(false);
