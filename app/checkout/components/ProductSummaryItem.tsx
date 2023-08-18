@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 interface ItemProps {
-  item: ProductSummaryItemProp;
+  item: ProductItemSummary;
   itemLength: number;
 }
 const ProductSummaryItem = ({ item, itemLength }: ItemProps) => {
