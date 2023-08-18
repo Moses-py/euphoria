@@ -43,7 +43,7 @@ const Mobile = () => {
                 <Link
                   onClick={toggleNav}
                   className="text-sm text-gray-600 tracking-wider hover:text-gray-2 transition-all ease-in"
-                  href="/men"
+                  href="/shop/men"
                 >
                   Men
                 </Link>
@@ -51,7 +51,7 @@ const Mobile = () => {
                 <Link
                   onClick={toggleNav}
                   className="text-sm text-gray-600 tracking-wider hover:text-gray-2 transition-all ease-in"
-                  href="/women"
+                  href="/shop/women"
                 >
                   Women
                 </Link>

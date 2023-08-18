@@ -8,11 +8,11 @@ export const renderByPathname = (path: string) => {
     case "/shop":
       verifiedPathProduct = [...products];
       break;
-    case "/men":
+    case "/shop/men":
       verifiedPathProduct = [...menCollectionItems];
       //
       break;
-    case "/women":
+    case "/shop/women":
       verifiedPathProduct = [...womenCollectionItems];
       break;
     case "/categories/shirts":

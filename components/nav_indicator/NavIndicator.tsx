@@ -7,17 +7,17 @@ interface NavIndicatorProps {
 const NavIndicator = ({ indicators }: NavIndicatorProps) => {
   return (
     <>
-      <div className=" text-gray-1 font-sans text-md flex gap-1">
+      <div className="flex text-gray-1 font-sans text-md gap-1">
         {indicators.map((indicator, index) => {
           return (
-            <>
+            <div key={index}>
               {index === indicators.length - 1 ? (
-                <p className="font-semibold" key={index + "-key"}>
-                  {indicator}
-                </p>
+                <p className="font-normal sm:text-base text-xs">{indicator}</p>
               ) : (
-                <div key={index} className="flex gap-1">
-                  <p className="font-light">{indicator}</p>
+                <div className="flex gap-1">
+                  <p className="font-normal sm:text-base text-xs">
+                    {indicator}
+                  </p>
                   <Image
                     src={"/icons/right.png"}
                     alt="right icon"
@@ -26,7 +26,7 @@ const NavIndicator = ({ indicators }: NavIndicatorProps) => {
                   />
                 </div>
               )}
-            </>
+            </div>
           );
         })}
       </div>

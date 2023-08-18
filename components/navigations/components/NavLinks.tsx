@@ -13,7 +13,7 @@ const NavLinks = () => {
       </li>
       <li>
         <Link
-          href={"/men"}
+          href={"/shop/men"}
           className="text-base text-gray-1 tracking-wider hover:text-gray-2 transition-all ease-in"
         >
           Men
@@ -21,7 +21,7 @@ const NavLinks = () => {
       </li>
       <li>
         <Link
-          href={"/women"}
+          href={"/shop/women"}
           className="text-base text-gray-1 tracking-wider hover:text-gray-2 transition-all ease-in"
         >
           Women

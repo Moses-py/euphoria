@@ -31,7 +31,7 @@ const Button = ({
         ${
           variant === "filled"
             ? "bg-button-primary-enabled text-white"
-            : "ring-0 ring-primary border border-primary bg-white text-primary hover:text-white"
+            : "ring-0 ring-gray-2 border border-gray-2 bg-white text-primary hover:bg-gray-3 hover:text-primary"
         }
         ${size === "sm" ? "w-fit" : "w-full"}
         ${icon && "flex gap-2 items-center justify-center"} 

@@ -139,7 +139,7 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
           </div>
         </div>
         {/* CTA */}
-        <div className="my-8 flex flex-col md:flex-row gap-4">
+        <div className="my-4 flex flex-col md:flex-row gap-4">
           {openCounter ? (
             <Counter
               minusOnclick={() => {
@@ -153,35 +153,53 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
               count={count}
             />
           ) : (
-            <Button
-              onclick={() => onAddToCart(product, "add")}
-              variant={"filled"}
-              size={"lg"}
-              type={"button"}
-              icon={
-                <>
-                  <Image
-                    src={"/icons/cart.png"}
-                    alt="message icon"
-                    width={30}
-                    height={20}
-                  />
-                </>
-              }
-            >
-              {loading ? (
-                <CircleLoader color="white" size={20} />
-              ) : (
-                "Add to cart"
-              )}
-            </Button>
+            <>
+              <Button
+                onclick={() => onAddToCart(product, "add")}
+                variant={"filled"}
+                size={"lg"}
+                type={"button"}
+                icon={
+                  <>
+                    <Image
+                      src={"/icons/cart.png"}
+                      alt="message icon"
+                      width={30}
+                      height={20}
+                    />
+                  </>
+                }
+              >
+                {loading ? (
+                  <CircleLoader color="white" size={20} />
+                ) : (
+                  "Add to cart"
+                )}
+              </Button>
+            </>
           )}
-          <div className="px-8 py-3 rounded-lg grid place-items-center border w-full border-gray-2">
-            $ {product.price}
-          </div>
+          <Button
+            variant={"outline"}
+            size={"lg"}
+            type={"button"}
+            icon={
+              <Image
+                src={"/icons/heart.svg"}
+                alt={"heart icon"}
+                width={20}
+                height={20}
+              />
+            }
+            classname="border-gray-2"
+          >
+            Add to wishlist
+          </Button>
+        </div>
+        <div className="px-8 py-3 rounded-lg grid place-items-center border w-full border-gray-2">
+          $ {product.price}
         </div>
 
-        <hr />
+        <hr className="my-3" />
         {/* Benefits */}
         <div className="grid sm:grid-cols-2 gap-4 my-8">
           <Benefits icon={"payment"} text={"Secure payment"} />

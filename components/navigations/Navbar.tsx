@@ -6,7 +6,7 @@ import Actions from "./components/Actions";
 const Navbar = () => {
   return (
     <>
-      <div className="sm:container font-sans px-2 py-4 flex justify-between items-center relative w-full">
+      <div className="font-sans p-5 flex justify-between items-center relative w-full">
         {/* Logo */}
 
         <Logo />

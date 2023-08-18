@@ -4,7 +4,7 @@ interface InputProps {
   label?: string;
   required: boolean;
   placeholder: string;
-  type: HTMLInputTypeAttribute;
+  type?: HTMLInputTypeAttribute;
   onchange?: () => void;
   classname?: string;
   variant: Variant;
@@ -37,13 +37,15 @@ const Input = ({
           />
         )}
         {variant === "textarea" && (
-          <textarea
-            required={required}
-            placeholder={placeholder}
-            onChange={onchange}
-            className={`${classname} p-3 ring-1 ring-gray-3 rounded-md focus:ring-1 focus:ring-gray-2 outline-none bg-light placeholder:text-gray-2 w-full`}
-            rows={5}
-          />
+          <>
+            <textarea
+              required={required}
+              placeholder={placeholder}
+              onChange={onchange}
+              className={`${classname} p-3 ring-1 ring-gray-3 rounded-md focus:ring-1 focus:ring-gray-2 outline-none bg-light placeholder:text-gray-2 w-full`}
+              rows={5}
+            />
+          </>
         )}
       </div>
     </>

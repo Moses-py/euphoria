@@ -4,9 +4,9 @@ import { useStore } from "@/store/Store";
 import { useEffect } from "react";
 import { menCollectionItems, womenCollectionItems } from "@/mocks/__mocks__";
 import { randomizeArray } from "@/utils/randomArrayIndexGenerator";
-import Shopboard from "../components/Shopboard";
+import Shopboard from "../../components/Shopboard";
 
-const WomenShop = () => {
+const MenShop = () => {
   const [setProducts] = useStore((state) => [state.setProducts]);
   useEffect(() => {
     const collection = randomizeArray(
@@ -25,4 +25,4 @@ const WomenShop = () => {
   );
 };
 
-export default WomenShop;
+export default MenShop;
