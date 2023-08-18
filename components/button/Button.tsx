@@ -8,6 +8,7 @@ type ButtonProps = {
   classname?: string;
   type: ButtonType;
   onclick?: () => void;
+  disabled?: boolean;
 };
 type ButtonType = "submit" | "button" | "reset";
 type ButtonVariant = "outline" | "filled";
@@ -20,22 +21,24 @@ const Button = ({
   classname,
   type,
   onclick,
+  disabled,
 }: ButtonProps) => {
   return (
     // todo: Optimize button flex alignment when icon is provided
     <button
       onClick={onclick}
+      disabled={disabled}
       type={type}
       className={`
         ${classname}
         ${
           variant === "filled"
             ? "bg-button-primary-enabled text-white"
-            : "ring-0 ring-gray-2 border border-gray-2 bg-white text-primary hover:bg-gray-3 hover:text-primary"
+            : "ring-0 ring-gray-2 border border-gray-2 bg-white text-primary hover:bg-gray-3 hover:text-primary active:bg-gray-3 focus:bg-gray-3"
         }
         ${size === "sm" ? "w-fit" : "w-full"}
         ${icon && "flex gap-2 items-center justify-center"} 
-        rounded-lg px-[20px] py-[10px] text-md font-sans font-semibold hover:bg-button-primary-focused-hover focus:bg-button-primary-focused-hover disabled:bg-button-primary-disabled
+        rounded-lg px-[10px] py-[6px] text-md font-sans font-semibold hover:bg-button-primary-focused-hover focus:bg-button-primary-focused-hover disabled:bg-button-primary-disabled disabled:cursor-not-allowed
     `}
     >
       {icon} {children}

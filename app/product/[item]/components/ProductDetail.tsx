@@ -5,7 +5,7 @@ import Button from "@/components/button/Button";
 import Benefits from "./Benefits";
 import { toast } from "react-toastify";
 import { useStore } from "@/store/Store";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Counter from "./Counter";
 import { CircleLoader } from "react-spinners";
 import NavIndicator from "@/components/nav_indicator/NavIndicator";
@@ -15,15 +15,16 @@ interface ProductDetailProps {
 }
 
 const ProductDetail = ({ product }: ProductDetailProps) => {
-  const [updateCart, cart] = useStore((state) => [
+  const [updateCart, updateWishlist] = useStore((state) => [
     state.updateCart,
-    state.cart,
+    state.updateWishlist,
   ]);
   const [selectColor, setSelectColor] = useState(product.colors[0]);
   const [selectSize, setSelectSize] = useState(product.sizes[0]);
   const [count, setCount] = useState(1);
   const [openCounter, setOpenCounter] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [isInWishlist, setIsInWishlist] = useState(false);
 
   const onAddToCart = (item: CollectionItem, command: Command) => {
     const cartItem: CartItem = {
@@ -49,6 +50,31 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
       setLoading(false);
     }
   };
+
+  const onUpdateWishlist = (item: CollectionItem, command: WishlistCommand) => {
+    const wishlistItem: ProductItemSummary = {
+      name: item.name,
+      price: item.price,
+      image: item.image,
+      selectedColor: selectColor,
+      id: item.id,
+      selectedSize: selectSize,
+    };
+
+    try {
+      updateWishlist(wishlistItem, command);
+      if (command === "add") {
+        setIsInWishlist(true);
+        toast("Item added to wishlist");
+      } else {
+        setIsInWishlist(false);
+        toast("Item removed from wishlist");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <>
       <div className="font-sans p-3 xl:p-[1.5rem]">
@@ -178,6 +204,7 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
               </Button>
             </>
           )}
+
           <Button
             variant={"outline"}
             size={"lg"}
@@ -191,8 +218,13 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
               />
             }
             classname="border-gray-2"
+            onclick={
+              isInWishlist
+                ? () => onUpdateWishlist(product, "delete")
+                : () => onUpdateWishlist(product, "add")
+            }
           >
-            Add to wishlist
+            {isInWishlist ? "Remove from wishlist" : "Add to wishlist"}
           </Button>
         </div>
         <div className="px-8 py-3 rounded-lg grid place-items-center border w-full border-gray-2">

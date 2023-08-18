@@ -1,4 +1,5 @@
 import { isItemInArray } from "@/utils/isItemInArray";
+import { updateWishlistCollection } from "@/utils/isItemInWishList";
 import { create } from "zustand";
 
 interface Store {
@@ -18,6 +19,8 @@ interface Store {
   setProducts: (arr: CollectionItem[]) => void;
   cart: CartArray[];
   updateCart: (item: CartItem, command: Command) => void;
+  wishlist: ProductItemSummary[];
+  updateWishlist: (item: ProductItemSummary, command: WishlistCommand) => void;
 }
 
 export const useStore = create<Store>((set, get) => ({
@@ -60,5 +63,10 @@ export const useStore = create<Store>((set, get) => ({
   updateCart: (item: CartItem, command: Command) => {
     const currentCart = get().cart;
     set({ cart: isItemInArray(currentCart, item, command) });
+  },
+  wishlist: [],
+  updateWishlist: (item: ProductItemSummary, command: WishlistCommand) => {
+    const currentWishList = get().wishlist;
+    set({ wishlist: updateWishlistCollection(currentWishList, item, command) });
   },
 }));

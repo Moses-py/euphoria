@@ -23,7 +23,7 @@ type CartItem = {
 
 type CartArray = CartItem[];
 
-type ProductSummaryItemProp = Omit<CartItem, "shipping">;
+type ProductItemSummary = Omit<CartItem, "shipping">;
 
 type ItemComment = {
   author: string;
@@ -62,5 +62,6 @@ type Category =
   | "Joggers";
 
 type Command = "remove" | "add" | "delete";
+type WishlistCommand = Omit<Command, "remove">;
 type GetTotalCommand = "price" | "shipping";
 type Country = { country: string; states: string[] };
