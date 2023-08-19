@@ -6,12 +6,16 @@ interface StateSelectProps {
   label: string;
   required: boolean;
   selectedCountry: string | undefined;
+  value?: string;
+  disabled?: boolean;
 }
 
 const StateSelect = ({
   label,
   required,
   selectedCountry,
+  value,
+  disabled,
 }: StateSelectProps) => {
   const [selectedCountryStates, setSelectedCountryStates] = useState<
     string[] | undefined
@@ -32,6 +36,8 @@ const StateSelect = ({
             {label} {required && <span className="text-red-600">*</span>}
           </label>
           <select
+            value={value}
+            disabled={disabled}
             required
             className={` p-3 ring-1 ring-gray-3 text-gray-1 rounded-md focus:ring-1 focus:ring-gray-2 outline-none bg-light placeholder:text-gray-2 w-full`}
           >

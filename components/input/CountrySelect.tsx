@@ -5,9 +5,17 @@ interface CountrySelectProps {
   label: string;
   required: boolean;
   onchange?: (e: ChangeEvent<HTMLSelectElement>) => void;
+  value?: string;
+  disabled?: boolean;
 }
 
-const CountrySelect = ({ label, required, onchange }: CountrySelectProps) => {
+const CountrySelect = ({
+  label,
+  required,
+  onchange,
+  value,
+  disabled,
+}: CountrySelectProps) => {
   return (
     <div className="flex flex-col gap-1 font-sans text-primary">
       <label htmlFor={label} className="font-semibold text-sm">
@@ -16,6 +24,8 @@ const CountrySelect = ({ label, required, onchange }: CountrySelectProps) => {
       <select
         required
         onChange={onchange}
+        value={value}
+        disabled={disabled}
         className={` p-3 ring-1 ring-gray-3 text-gray-1 rounded-md focus:ring-1 focus:ring-gray-2 outline-none bg-light placeholder:text-gray-2 w-full`}
       >
         {country_list.map((country, index) => {

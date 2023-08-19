@@ -1,30 +1,70 @@
+type User = {
+  name: string;
+  password: string;
+  phonenumber: string;
+  address?: AddressHeirachy[];
+  userId: string;
+  orders?: string[];
+};
+
+type UserAddress = {
+  streetNumber: string;
+  streetname: string;
+  city: string;
+  country: string;
+  zipcode: string;
+  state: string;
+};
+
+type AddressHeirachy = {
+  role: AddressRole;
+  addressData: UserAddress;
+};
+
+type AddressRole = "default" | "non-default";
+
 type CollectionItem = {
   name: string;
   price: string;
   image: string;
   colors: string[];
-  id: string;
+  sn: string;
   description: string;
   comments?: ItemComment[] | undefined;
   properties: Properties;
   category: Category;
   sizes: Sizes[];
   brand: Brand;
+  id: string;
 };
 type CartItem = {
   name: string;
   price: string;
   image: string;
   selectedColor: string;
-  id: string;
+  sn: string;
   selectedSize: Sizes;
   shipping: number;
+  id: string;
 };
 
 type CartArray = CartItem[];
 
-type ProductItemSummary = Omit<CartItem, "shipping">;
+type ProductItemSummary = Omit<CartItem, "shipping" | "id">;
 
+type Orders = {
+  orderId: string;
+  orderDate: Date;
+  deliveryDate: Date;
+  status: Status;
+  paymentMethod: PaymentMethod;
+  orderItems: CartArray[];
+  orderAddress: string;
+  orderAuthorId: string;
+};
+
+type Status = "processing" | "shipping";
+type PaymentMethod = "card" | "Cash on delivery";
 type ItemComment = {
   author: string;
   content: string;

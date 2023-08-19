@@ -4,9 +4,9 @@ const ShippingMethodOption = () => {
   return (
     <div className="font-sans my-[4rem]">
       <div className="my-[1rem]">
-        <h1 className="lg:text-2xl text-xl font-bold text-primary my-5">
-          Shipping method
-        </h1>
+        <h2 className="lg:text-xl md:text-lg text-md font-bold text-primary my-4">
+          Shipping Method
+        </h2>
       </div>
 
       <div className="bg-light rounded-2xl px-6 py-8 font-sans">

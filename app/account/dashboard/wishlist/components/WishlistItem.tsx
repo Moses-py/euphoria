@@ -1,6 +1,7 @@
 "use client";
 import Button from "@/components/button/Button";
 import { useStore } from "@/store/Store";
+import generateRandomString from "@/utils/randomStringGenerator";
 import Image from "next/image";
 import { toast } from "react-toastify";
 
@@ -19,9 +20,10 @@ const WishlistItem = ({ item }: WishlistItemProps) => {
       price: item.price,
       image: item.image,
       selectedColor: item.selectedColor,
-      id: item.id,
+      sn: item.sn,
       selectedSize: item.selectedSize,
       shipping: 2.0,
+      id: generateRandomString(10),
     };
     try {
       updateCart(cartItem, command);

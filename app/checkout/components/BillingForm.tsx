@@ -3,6 +3,7 @@ import CountrySelect from "@/components/input/CountrySelect";
 import Input from "@/components/input/Input";
 import StateSelect from "@/components/input/StateSelect";
 import { country_list } from "@/mocks/countries";
+import { useStore } from "@/store/Store";
 import { ChangeEvent, useState } from "react";
 
 const BillingForm = () => {
@@ -10,22 +11,22 @@ const BillingForm = () => {
     country_list[0].country
   );
 
+  const [user] = useStore((state) => [state.user]);
+
+  const defaultUserAddress = user?.address?.find(
+    (address) => (address.role = "default")
+  );
+
   return (
     <>
-      <div className="grid md:grid-cols-2 gap-5 mb-[1rem]">
+      <div className="grid gap-5 mb-[1rem]">
         <Input
-          label={"First name"}
+          label={"Name"}
           required={true}
-          placeholder={"First name"}
+          placeholder={"Name"}
           type={"text"}
           variant={"input"}
-        />
-        <Input
-          label={"Last name"}
-          required={true}
-          placeholder={"Last name"}
-          type={"text"}
-          variant={"input"}
+          value={user.name}
         />
       </div>
       <div className="grid md:grid-cols-2 gap-5 mb-[2rem]">
@@ -35,13 +36,12 @@ const BillingForm = () => {
           onchange={(e: ChangeEvent<HTMLSelectElement>) =>
             setSelectedCountry(e.target.value)
           }
+          value={defaultUserAddress?.addressData.country}
         />
-        <Input
-          label={"Company (Optional)"}
-          required={false}
-          placeholder={"Company (Optional)"}
-          type={"text"}
-          variant={"input"}
+        <StateSelect
+          label={"State"}
+          required={true}
+          selectedCountry={defaultUserAddress?.addressData.country}
         />
       </div>
       <div className="grid md:grid-cols-2 gap-5 mb-[1rem]">
@@ -51,6 +51,7 @@ const BillingForm = () => {
           placeholder={"Street address"}
           type={"text"}
           variant={"input"}
+          value={defaultUserAddress?.addressData.streetname}
         />
         <Input
           label={"Apt, Suite, unit"}
@@ -58,27 +59,26 @@ const BillingForm = () => {
           placeholder={"Apt, Suite, unit"}
           type={"text"}
           variant={"input"}
+          value={defaultUserAddress?.addressData.streetNumber}
         />
       </div>
-      <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-5 mb-[1rem]">
+      <div className="grid md:grid-cols-2 gap-5 mb-[1rem]">
         <Input
           label={"City"}
           required={true}
           placeholder={"City"}
           type={"text"}
           variant={"input"}
+          value={defaultUserAddress?.addressData.city}
         />
-        <StateSelect
-          label={"State"}
-          required={true}
-          selectedCountry={selectedCountry}
-        />
+
         <Input
           label={"Zip code"}
           required={true}
           placeholder={"Zip code"}
           type={"text"}
           variant={"input"}
+          value={defaultUserAddress?.addressData.zipcode}
         />
       </div>
       <div className="grid gap-5 mb-[1rem]">
@@ -88,6 +88,7 @@ const BillingForm = () => {
           placeholder={"Phone number"}
           type={"text"}
           variant={"input"}
+          value={user.phonenumber}
         />
       </div>
     </>

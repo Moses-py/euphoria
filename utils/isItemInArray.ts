@@ -41,3 +41,18 @@ export const isItemInArray = (
 
   return cart;
 };
+
+export const isItemInCartArray = (cart: CartArray[], item: CartItem) => {
+  let isFound = false;
+  for (let cartItem of cart) {
+    if (
+      cartItem[0].id === item.id &&
+      cartItem[0].selectedColor === item.selectedColor &&
+      cartItem[0].selectedSize === item.selectedSize
+    ) {
+      isFound = true;
+      break;
+    }
+  }
+  return isFound;
+};

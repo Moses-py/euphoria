@@ -10,16 +10,19 @@ import Counter from "./Counter";
 import { CircleLoader } from "react-spinners";
 import NavIndicator from "@/components/nav_indicator/NavIndicator";
 import { isItemInWishlist } from "@/utils/isItemInWishList";
+import generateRandomString from "@/utils/randomStringGenerator";
+import { isItemInCartArray } from "@/utils/isItemInArray";
 
 interface ProductDetailProps {
   product: CollectionItem;
 }
 
 const ProductDetail = ({ product }: ProductDetailProps) => {
-  const [updateCart, updateWishlist, wishlist] = useStore((state) => [
+  const [updateCart, updateWishlist, wishlist, cart] = useStore((state) => [
     state.updateCart,
     state.updateWishlist,
     state.wishlist,
+    state.cart,
   ]);
   const [selectColor, setSelectColor] = useState(product.colors[0]);
   const [selectSize, setSelectSize] = useState(product.sizes[0]);
@@ -27,19 +30,30 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
   const [openCounter, setOpenCounter] = useState(false);
   const [loading, setLoading] = useState(false);
   const [isInWishlist, setIsInWishlist] = useState<boolean | undefined>();
-
+  const [isItemInCart, setIsItemInCart] = useState<boolean | undefined>();
   useEffect(() => {
     const productItem: ProductItemSummary = {
       name: product.name,
       price: product.price,
       image: product.image,
       selectedColor: selectColor,
-      id: product.id,
+      sn: product.sn,
       selectedSize: selectSize,
     };
+    const cartItem: CartItem = {
+      name: product.name,
+      price: product.price,
+      image: product.image,
+      selectedColor: selectColor,
+      sn: product.sn,
+      selectedSize: selectSize,
+      shipping: 2.0,
+      id: product.id,
+    };
+    setIsItemInCart(isItemInCartArray(cart, cartItem));
     setIsInWishlist(isItemInWishlist(wishlist, productItem));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [selectColor, selectSize]);
 
   const onAddToCart = (item: CollectionItem, command: Command) => {
     const cartItem: CartItem = {
@@ -47,9 +61,10 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
       price: item.price,
       image: item.image,
       selectedColor: selectColor,
-      id: item.id,
+      sn: item.sn,
       selectedSize: selectSize,
       shipping: 2.0,
+      id: item.id,
     };
     try {
       setLoading(true);
@@ -72,7 +87,7 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
       price: item.price,
       image: item.image,
       selectedColor: selectColor,
-      id: item.id,
+      sn: item.sn,
       selectedSize: selectSize,
     };
 
@@ -181,7 +196,7 @@ const ProductDetail = ({ product }: ProductDetailProps) => {
         </div>
         {/* CTA */}
         <div className="my-4 flex flex-col md:flex-row gap-4">
-          {openCounter ? (
+          {openCounter || isItemInCart ? (
             <Counter
               minusOnclick={() => {
                 setCount((prev) => prev - 1);

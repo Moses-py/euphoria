@@ -23,5 +23,16 @@ export const isItemInWishlist = (
   list: ProductItemSummary[],
   item: ProductItemSummary
 ) => {
-  return list.includes(item);
+  let isFound = false;
+  for (let listItem of list) {
+    if (
+      listItem.name === item.name &&
+      listItem.selectedColor === item.selectedColor &&
+      listItem.selectedSize === item.selectedSize
+    ) {
+      isFound = true;
+      break;
+    }
+  }
+  return isFound;
 };

@@ -1,5 +1,6 @@
 import { isItemInArray } from "@/utils/isItemInArray";
 import { updateWishlistCollection } from "@/utils/isItemInWishList";
+import generateRandomString from "@/utils/randomStringGenerator";
 import { create } from "zustand";
 
 interface Store {
@@ -19,8 +20,13 @@ interface Store {
   setProducts: (arr: CollectionItem[]) => void;
   cart: CartArray[];
   updateCart: (item: CartItem, command: Command) => void;
+  clearCart: () => void;
   wishlist: ProductItemSummary[];
   updateWishlist: (item: ProductItemSummary, command: WishlistCommand) => void;
+  user: User;
+  loginUser: (data: User) => void;
+  orders: Orders[];
+  setOrders: (order: Orders) => void;
 }
 
 export const useStore = create<Store>((set, get) => ({
@@ -64,9 +70,48 @@ export const useStore = create<Store>((set, get) => ({
     const currentCart = get().cart;
     set({ cart: isItemInArray(currentCart, item, command) });
   },
+  clearCart: () => {
+    set({ cart: [] });
+  },
   wishlist: [],
   updateWishlist: (item: ProductItemSummary, command: WishlistCommand) => {
     const currentWishList = get().wishlist;
     set({ wishlist: updateWishlistCollection(currentWishList, item, command) });
+  },
+  user: {
+    name: "Moses Chukwunekwu",
+    password: "devilwillcry1",
+    userId: "ds084r30uj3m",
+    phonenumber: "09069885063",
+    address: [
+      {
+        role: "default",
+        addressData: {
+          streetNumber: "08",
+          streetname: "Okey Eze street",
+          city: "Ipaja",
+          country: "Nigeria",
+          zipcode: "100234",
+          state: "Lagos",
+        },
+      },
+    ],
+    orders: [],
+  },
+  loginUser: (data: User) => {
+    const userId = generateRandomString(20);
+    set({ user: { ...data, userId } });
+  },
+  orders: [],
+  setOrders: (order: Orders) => {
+    const currentOrders = get().orders;
+    const getUser = get().user;
+    const modifiedUser = {
+      ...getUser,
+      orders: getUser.orders?.concat([order.orderId]),
+    };
+    getUser.orders?.push(order.orderId);
+    set({ orders: [...currentOrders, order] });
+    set({ user: { ...modifiedUser } });
   },
 }));
