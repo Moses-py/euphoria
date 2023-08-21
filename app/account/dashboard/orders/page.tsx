@@ -6,9 +6,9 @@ import CompletedOrders from "./components/CompletedOrders";
 const Orders = () => {
   return (
     <>
-      <div className="flex-1 w-full p-3">
+      <div className="flex-1 px-5 w-full">
         <Tabs defaultValue="active" className="w-full ">
-          <TabsList className="w-full bg-transparent dark:bg-transparent ring-1 ring-primary">
+          <TabsList className="w-full bg-transparent dark:bg-transparent my-5 ring-1 ring-primary">
             <TabsTrigger
               value="active"
               className="w-full bg-light text-primary rounded-md "
@@ -28,7 +28,7 @@ const Orders = () => {
               Completed
             </TabsTrigger>
           </TabsList>
-          <TabsContent value="active">
+          <TabsContent value="active" className="w-full h-full">
             <ActiveOrders />
           </TabsContent>
           <TabsContent value="cancelled">

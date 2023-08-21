@@ -37,7 +37,7 @@ const Input = ({
             required={required}
             placeholder={placeholder}
             onChange={onchange}
-            value={value}
+            defaultValue={value}
             disabled={disabled}
             className={`${classname} disabled:cursor-not-allowed p-3 ring-1 ring-gray-3 rounded-md focus:ring-1 focus:ring-gray-2 outline-none bg-light placeholder:text-gray-2 placeholder:text-sm w-full`}
           />

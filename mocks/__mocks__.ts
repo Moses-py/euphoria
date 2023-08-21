@@ -450,7 +450,7 @@ export const menCollectionItems: CollectionItem[] = [
   },
   {
     id: generateRandomString(10),
-    name: "Westssne Cali 705",
+    name: "Westside Cali 705",
     price: "99.99",
     image: "/figma/catalog/men/printed-4",
     colors: ["black", "white"],
@@ -982,7 +982,7 @@ export const womenCollectionItems: CollectionItem[] = [
   },
   {
     id: generateRandomString(10),
-    name: "BLack Rose",
+    name: "Black Rose",
     price: "89.99",
     image: "/figma/catalog/women/printed-women-2",
     colors: ["black", "white"],

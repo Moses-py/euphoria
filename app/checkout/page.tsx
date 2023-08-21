@@ -31,7 +31,7 @@ const Checkout = () => {
     setLoading(true);
     const address = `${defaultUserAddress?.addressData.streetNumber}, ${defaultUserAddress?.addressData.streetname}, ${defaultUserAddress?.addressData.city}, ${defaultUserAddress?.addressData.state}, ${defaultUserAddress?.addressData.country}`;
     const orderDetails: Orders = {
-      orderId: generateRandomString(30),
+      orderId: generateRandomString(10),
       orderDate: new Date(),
       deliveryDate: new Date(),
       status: "processing",
