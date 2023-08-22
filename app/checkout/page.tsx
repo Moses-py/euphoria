@@ -34,7 +34,7 @@ const Checkout = () => {
       orderId: generateRandomString(10),
       orderDate: new Date(),
       deliveryDate: new Date(),
-      status: "processing",
+      status: "Active",
       paymentMethod: "Cash on delivery",
       orderItems: cart,
       orderAddress: address,

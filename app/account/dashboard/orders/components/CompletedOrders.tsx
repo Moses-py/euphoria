@@ -1,9 +1,15 @@
-import React from "react";
+"use client";
 
-type Props = {};
+import P from "@/components/typography/P";
 
-const CompletedOrders = (props: Props) => {
-  return <div>CompletedOrders</div>;
+const CancelledOrders = () => {
+  return (
+    <>
+      <div className="w-full h-full grid place-items-center">
+        <P>No Completed orders</P>
+      </div>
+    </>
+  );
 };
 
-export default CompletedOrders;
+export default CancelledOrders;

@@ -1,4 +1,4 @@
-function formatCustomDate(date: Date): string {
+function formatCustomDate(date: Date, shouldIncludeTime: boolean): string {
   const months = [
     "January",
     "February",
@@ -22,12 +22,11 @@ function formatCustomDate(date: Date): string {
   const period = hours >= 12 ? "PM" : "AM";
   const formattedHours = hours % 12 === 0 ? 12 : hours % 12;
 
-  const formattedDate = `${day} ${month} ${year}`;
+  const formattedDate = `${day} ${month} ${year} ${
+    shouldIncludeTime &&
+    `at ${formattedHours}:${minutes.toString().padStart(2, "0")} ${period}`
+  }`;
   return formattedDate;
 }
 
 export default formatCustomDate;
-
-// at ${formattedHours}:${minutes
-//     .toString()
-//     .padStart(2, "0")} ${period}

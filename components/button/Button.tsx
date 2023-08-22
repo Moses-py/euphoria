@@ -38,7 +38,7 @@ const Button = ({
         }
         ${size === "sm" ? "w-fit" : "w-full"}
         ${icon && "flex gap-2 items-center justify-center"} 
-        rounded-lg px-[10px] py-[6px] text-md font-sans font-semibold hover:bg-button-primary-focused-hover focus:bg-button-primary-focused-hover disabled:bg-button-primary-disabled disabled:cursor-not-allowed
+        rounded-lg px-[10px] py-[6px] text-sm font-sans font-semibold hover:bg-button-primary-focused-hover focus:bg-button-primary-focused-hover disabled:bg-button-primary-disabled disabled:cursor-not-allowed
     `}
     >
       {icon} {children}

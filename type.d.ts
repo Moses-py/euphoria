@@ -63,7 +63,7 @@ type Orders = {
   orderAuthorId: string;
 };
 
-type Status = "processing" | "shipping";
+type Status = "Active" | "Completed" | "Cancelled";
 type PaymentMethod = "card" | "Cash on delivery";
 type ItemComment = {
   author: string;

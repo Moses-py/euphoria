@@ -21,13 +21,13 @@ const OrderItem = ({ order }: OrderItemProps) => {
             <p className="text-sm md:text-base text-primary font-bold">
               Order date: <br />
               <span className="text-gray-1 font-semibold text-xs">
-                {formatCustomDate(order.orderDate)}
+                {formatCustomDate(order.orderDate, false)}
               </span>
             </p>
             <p className="text-sm md:text-base text-primary font-bold">
               Delivery date: <br />
               <span className="text-gray-1 font-semibold text-xs">
-                {formatCustomDate(order.deliveryDate)}
+                {formatCustomDate(order.deliveryDate, false)}
               </span>
             </p>
           </div>
@@ -44,7 +44,7 @@ const OrderItem = ({ order }: OrderItemProps) => {
                 {order.paymentMethod}
               </span>
             </p>
-            <Link href={""}>
+            <Link href={`/account/dashboard/orders/details/${order.orderId}`}>
               <Button variant={"filled"} size={"sm"} type={"button"}>
                 View details
               </Button>

@@ -27,6 +27,7 @@ interface Store {
   loginUser: (data: User) => void;
   orders: Orders[];
   setOrders: (order: Orders) => void;
+  cancelOrder: (orderID: string) => void;
 }
 
 export const useStore = create<Store>((set, get) => ({
@@ -113,5 +114,16 @@ export const useStore = create<Store>((set, get) => ({
     getUser.orders?.push(order.orderId);
     set({ orders: [...currentOrders, order] });
     set({ user: { ...modifiedUser } });
+  },
+  cancelOrder: (orderID: string) => {
+    const currentOrders = get().orders;
+    for (let order of currentOrders) {
+      if (order.orderId === orderID) {
+        order.status = "Cancelled";
+        break;
+      }
+    }
+
+    set({ orders: currentOrders });
   },
 }));
