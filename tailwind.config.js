@@ -28,7 +28,7 @@ export const theme = {
   },
   fontFamily: {
     serif: ["var(--font-causten)"],
-    sans: ["var(--font-open_sans)"],
+    sans: ["var(--font-raleway)"],
   },
   container: {
     center: true,

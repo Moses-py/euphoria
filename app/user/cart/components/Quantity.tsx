@@ -12,7 +12,7 @@ const Quantity = ({ minusOnclick, plusOnclick, count }: QuantityProps) => {
       >
         -
       </button>
-      <div className="flex items-end text-primary justify-center px-3 text-base font-light">
+      <div className="flex items-end text-primary justify-center px-3 text-base font-regular">
         {count}
       </div>
       <button

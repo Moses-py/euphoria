@@ -1,4 +1,4 @@
-import { causten, open_sans } from "@/utils/fonts";
+import { causten, raleway } from "@/utils/fonts";
 import "./globals.css";
 import type { Metadata } from "next";
 import NextTopLoader from "nextjs-toploader";
@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${causten.variable} ${open_sans.variable}`}>
+      <body className={`${causten.variable} ${raleway.variable}`}>
         <NextTopLoader color="#6246EA" height={6} />
 
         {children}

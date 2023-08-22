@@ -9,13 +9,13 @@ const Footer = () => {
               Need help?
             </h3>
             <ul className="flex flex-col gap-2">
-              <li className="font-sans text-lg font-light">Contact us</li>
-              <li className="font-sans text-lg font-light">Track order</li>
-              <li className="font-sans text-lg font-light">
+              <li className="font-sans text-lg font-regular">Contact us</li>
+              <li className="font-sans text-lg font-regular">Track order</li>
+              <li className="font-sans text-lg font-regular">
                 Returns & refunds
               </li>
-              <li className="font-sans text-lg font-light">FAQ`s</li>
-              <li className="font-sans text-lg font-light">Careers</li>
+              <li className="font-sans text-lg font-regular">FAQ`s</li>
+              <li className="font-sans text-lg font-regular">Careers</li>
             </ul>
           </div>
           {/* company */}
@@ -24,11 +24,11 @@ const Footer = () => {
               Company
             </h3>
             <ul className="flex flex-col gap-2">
-              <li className="font-sans text-lg font-light">About us</li>
-              <li className="font-sans text-lg font-light">Euphoria blog</li>
-              <li className="font-sans text-lg font-light">Euphoria stan</li>
-              <li className="font-sans text-lg font-light">Collaboration</li>
-              <li className="font-sans text-lg font-light">Media</li>
+              <li className="font-sans text-lg font-regular">About us</li>
+              <li className="font-sans text-lg font-regular">Euphoria blog</li>
+              <li className="font-sans text-lg font-regular">Euphoria stan</li>
+              <li className="font-sans text-lg font-regular">Collaboration</li>
+              <li className="font-sans text-lg font-regular">Media</li>
             </ul>
           </div>
           {/* info */}
@@ -37,12 +37,14 @@ const Footer = () => {
               More info
             </h3>
             <ul className="flex flex-col gap-2">
-              <li className="font-sans text-lg font-light">
+              <li className="font-sans text-lg font-regular">
                 Terms and conditions
               </li>
-              <li className="font-sans text-lg font-light">Privacy policy</li>
-              <li className="font-sans text-lg font-light">Shipping policy</li>
-              <li className="font-sans text-lg font-light">Sitemap</li>
+              <li className="font-sans text-lg font-regular">Privacy policy</li>
+              <li className="font-sans text-lg font-regular">
+                Shipping policy
+              </li>
+              <li className="font-sans text-lg font-regular">Sitemap</li>
             </ul>
           </div>
           {/* location */}
@@ -51,13 +53,13 @@ const Footer = () => {
               Location
             </h3>
             <ul className="flex flex-col gap-2">
-              <li className="font-sans text-lg font-light">
+              <li className="font-sans text-lg font-regular">
                 support@euphoria.in
               </li>
-              <li className="font-sans text-lg font-light">
+              <li className="font-sans text-lg font-regular">
                 Eklingpura Chouraha, Ahmedabad Main Road
               </li>
-              <li className="font-sans text-lg font-light">
+              <li className="font-sans text-lg font-regular">
                 (NH 8- Near Mahadev Hotel) Udaipur, India- 313002
               </li>
             </ul>
@@ -65,7 +67,7 @@ const Footer = () => {
         </div>
         <hr className="my-[2rem]" />
         <div className="w-full grid place-items-center">
-          <span className="text-base font-sans font-light text-light mt-[2rem] text-center">
+          <span className="text-base font-sans font-regular text-light mt-[2rem] text-center">
             Copyright © 2023 Euphoria Folks Pvt Ltd. All rights reserved.
           </span>
         </div>

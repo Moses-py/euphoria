@@ -25,7 +25,7 @@ const ProductCard = ({ name, img, brand, price }: ProductCardProps) => {
               <p className="font-bold font-sans text-primary mt-[2rem] text-base sm:text-md">
                 {name}
               </p>
-              <p className="font-light text-primary mt-1 font-sans text-sm">
+              <p className="font-regular text-primary mt-1 font-sans text-sm">
                 {brand}
               </p>
             </div>

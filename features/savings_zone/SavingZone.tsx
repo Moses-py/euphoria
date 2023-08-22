@@ -11,7 +11,7 @@ const zoneData: ZoneCardProps[] = [
     subtitle: "Dress up in summer vibe",
     textDirection: "left",
     discount: "50",
-    color: "light",
+    color: "regular",
   },
   {
     orientation: "portrait",
@@ -20,7 +20,7 @@ const zoneData: ZoneCardProps[] = [
     subtitle: "New design every week",
     textDirection: "right",
     discount: "40",
-    color: "light",
+    color: "regular",
   },
   {
     orientation: "portrait",
@@ -105,7 +105,7 @@ const SavingZone = () => {
                 <h1 className="xl:text-3xl md:text-2xl sm:text-xl text-lg font-bold uppercase">
                   We make your everyday fashion better!
                 </h1>
-                <p className="text-base sm:text-md md:text-lg font-light">
+                <p className="text-base sm:text-md md:text-lg font-regular">
                   In our journey to improve everyday fashion, euphoria presents
                   EVERYDAY wear range - Comfortable & Affordable fashion 24/7
                 </p>

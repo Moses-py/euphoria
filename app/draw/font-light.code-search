@@ -1,0 +1,89 @@
+# Query: font-light
+
+58 results - 14 files
+
+app\product\[item]\components\Description.tsx:
+  15:             <p className="text-lg font-sans text-primary font-regular tracking-wide">
+
+app\product\[item]\components\Properties.tsx:
+  21:           <p className="text-lg text-gray-1 font-regular my-2">Fabric</p>
+  27:           <p className="text-lg text-gray-1 font-regular my-2">Pattern</p>
+  33:           <p className="text-lg text-gray-1 font-regular my-2">Fit</p>
+  39:           <p className="text-lg text-gray-1 font-regular my-2">Neck</p>
+  45:           <p className="text-lg text-gray-1 font-regular my-2">Sleeve</p>
+  51:           <p className="text-lg text-gray-1 font-regular my-2">Style</p>
+
+app\user\cart\components\CartItem.tsx:
+   32:                 <p className="text-primary text-sm font-regular">
+   36:                 <p className="text-primary text-sm font-regular">
+   40:                 <p className="block lg:hidden text-primary text-sm font-regular">
+   46:                   <li className="text-primary text-sm font-regular">
+   50:                   <li className="text-primary text-sm font-regular">
+   57:                   <li className="text-primary text-sm font-regular float-left  xs:mt-0">
+   70:             <li className="text-primary text-sm font-regular">
+   74:             <li className="text-primary text-sm font-regular">
+   81:             <li className="text-primary text-sm font-regular float-left mt-[1rem] xs:mt-0">
+   91:             <li className="text-primary text-sm font-regular">
+   94:             <li className="text-primary text-sm font-regular">
+  101:             <li className="text-primary text-sm font-regular">
+  104:             <li className="text-primary text-sm font-regular">
+
+app\user\cart\components\CartTable.tsx:
+  38:             <p className="text-gray-1 font-regular text-lg">
+  51:               <button className="rounded-md px-5 py-2 ring-1 ring-gray-2 hover:bg-secondary transition-all ease-in duration-200 hover:text-light font-regular">
+  60:                 <p className="text-lg font-regular text-gray-1">Total</p>
+  61:                 <p className="text-lg font-regular text-gray-1">Shipping</p>
+  65:                 <p className="text-lg font-regular text-gray-1">
+  68:                 <p className="text-lg font-regular text-gray-1">
+
+app\user\cart\components\EmptyCart.tsx:
+  19:           <p className="text-primary text-lg font-regular text-center">
+
+app\user\cart\components\Quantity.tsx:
+  15:       <div className="flex items-end text-primary justify-center px-3 text-base font-regular">
+
+components\footer\Footer.tsx:
+  12:               <li className="font-sans text-lg font-regular">Contact us</li>
+  13:               <li className="font-sans text-lg font-regular">Track order</li>
+  14:               <li className="font-sans text-lg font-regular">
+  17:               <li className="font-sans text-lg font-regular">FAQ`s</li>
+  18:               <li className="font-sans text-lg font-regular">Careers</li>
+  27:               <li className="font-sans text-lg font-regular">About us</li>
+  28:               <li className="font-sans text-lg font-regular">Euphoria blog</li>
+  29:               <li className="font-sans text-lg font-regular">Euphoria stan</li>
+  30:               <li className="font-sans text-lg font-regular">Collaboration</li>
+  31:               <li className="font-sans text-lg font-regular">Media</li>
+  40:               <li className="font-sans text-lg font-regular">
+  43:               <li className="font-sans text-lg font-regular">Privacy policy</li>
+  44:               <li className="font-sans text-lg font-regular">Shipping policy</li>
+  45:               <li className="font-sans text-lg font-regular">Sitemap</li>
+  54:               <li className="font-sans text-lg font-regular">
+  57:               <li className="font-sans text-lg font-regular">
+  60:               <li className="font-sans text-lg font-regular">
+  68:           <span className="text-base font-sans font-regular text-light mt-[2rem] text-center">
+
+components\navigations\Mobile.tsx:
+  34:               <ul className="flex gap-8 flex-col font-regular">
+
+components\navigations\components\NavLinks.tsx:
+  5:     <ul className="flex justify-center items-center gap-[2.5rem] font-regular">
+
+components\product\ProductCard.tsx:
+  28:               <p className="font-regular text-primary mt-1 font-sans text-sm">
+
+features\categories\components\Card.tsx:
+  29:             className="font-regular underline text-black mt-1 font-sans text-sm"
+
+features\hero\components\BackgroundImage.tsx:
+  31:         <p className="font-sans xl:text-3xl sm:text-2xl text-xl font-regular">
+  37:         <p className="font-sans xl:text-3xl sm:text-2xl text-xl font-regular">
+  41:           <button className="bg-light text-black rounded-md px-[4rem] py-[0.5rem] w-fit font-sans text-lg font-regular hover:bg-button-primary-focused-hover hover:text-light">
+
+features\savings_zone\SavingZone.tsx:
+  108:                 <p className="text-base sm:text-md md:text-lg font-regular">
+
+features\savings_zone\components\SavingZoneCard.tsx:
+   49:                 <p className="text-sm lg:text-md font-regular">{subtitle}</p>
+   60:                     } hover:shadow-xl text-sm font-regular`}
+   91:                 <p className="text-sm lg:text-md font-regular">{subtitle}</p>
+  102:                     } hover:shadow-xl text-sm font-regular`}

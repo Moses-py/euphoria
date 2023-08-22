@@ -16,7 +16,7 @@ const EmptyCart = () => {
           <h1 className="text-primary text-2xl text-center">
             Your cart is empty and sad :(
           </h1>
-          <p className="text-primary text-lg font-light text-center">
+          <p className="text-primary text-lg font-regular text-center">
             Add something to make it happy
           </p>
         </div>

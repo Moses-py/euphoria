@@ -35,7 +35,7 @@ const CartTable = ({ cart }: CartTableProps) => {
             <h1 className="lg:text-2xl text md:text-xl text-lg text-primary">
               Discount Codes
             </h1>
-            <p className="text-gray-1 font-light text-lg">
+            <p className="text-gray-1 font-regular text-lg">
               Enter your coupon code if you have one
             </p>
             <div className="flex items-center w-full">
@@ -48,7 +48,7 @@ const CartTable = ({ cart }: CartTableProps) => {
               </button>
             </div>
             <Link href="/shop" className="mt-[2rem] w-full">
-              <button className="rounded-md px-5 py-2 ring-1 ring-gray-2 hover:bg-secondary transition-all ease-in duration-200 hover:text-light font-light">
+              <button className="rounded-md px-5 py-2 ring-1 ring-gray-2 hover:bg-secondary transition-all ease-in duration-200 hover:text-light font-regular">
                 Continue shopping
               </button>
             </Link>
@@ -57,15 +57,15 @@ const CartTable = ({ cart }: CartTableProps) => {
           <div>
             <div className="flex gap-6">
               <div className="flex flex-col gap-3">
-                <p className="text-lg font-light text-gray-1">Total</p>
-                <p className="text-lg font-light text-gray-1">Shipping</p>
+                <p className="text-lg font-regular text-gray-1">Total</p>
+                <p className="text-lg font-regular text-gray-1">Shipping</p>
                 <p className="text-lg font-semibold mt-6">Grand Total</p>
               </div>
               <div className="flex flex-col gap-3">
-                <p className="text-lg font-light text-gray-1">
+                <p className="text-lg font-regular text-gray-1">
                   ${getTotal(cart, "price").toFixed(2)}
                 </p>
-                <p className="text-lg font-light text-gray-1">
+                <p className="text-lg font-regular text-gray-1">
                   ${getTotal(cart, "shipping").toFixed(2)}
                 </p>
                 <p className="text-lg font-semibold mt-6">

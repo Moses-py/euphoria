@@ -10,7 +10,7 @@ const Benefits = ({ icon, text }: BenefitsProps) => {
     <>
       <div className="flex gap-4 items-center">
         <Image src={`/icons/${icon}.png`} alt={""} width={40} height={40} />
-        <p className="text-lg font-sans text-primary font-light">{text}</p>
+        <p className="text-lg font-sans text-primary font-regular">{text}</p>
       </div>
     </>
   );

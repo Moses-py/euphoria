@@ -26,7 +26,7 @@ const Card = ({ type, img, category }: CardProps) => {
           </p>
           <Link
             href="/shop"
-            className="font-light underline text-black mt-1 font-sans text-sm"
+            className="font-regular underline text-black mt-1 font-sans text-sm"
           >
             Explore now
           </Link>

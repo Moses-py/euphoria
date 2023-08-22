@@ -12,7 +12,7 @@ const Description = ({ item }: DescriptionProps) => {
         <Title>Product Description</Title>
         <div className="grid md:grid-cols-2 gap-8 my-[1rem]">
           <div className="flex flex-col gap-8">
-            <p className="text-lg font-sans text-primary font-light tracking-wide">
+            <p className="text-lg font-sans text-primary font-regular tracking-wide">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque
               consequuntur in beatae eaque similique nam, est cum incidunt
               provident repellat saepe id. Temporibus corpori.

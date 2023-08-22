@@ -41,28 +41,40 @@ export const causten = localFont({
   ],
   variable: "--font-causten",
 });
-export const open_sans = localFont({
+export const raleway = localFont({
   src: [
     {
-      path: "../public/fonts/open-sans/OpenSans-ExtraBold.ttf",
+      path: "../public/fonts/raleway/Raleway-Heavy.ttf",
+      weight: "900",
+    },
+    {
+      path: "../public/fonts/raleway/Raleway-ExtraBold.ttf",
       weight: "800",
     },
     {
-      path: "../public/fonts/open-sans/OpenSans-Bold.ttf",
+      path: "../public/fonts/raleway/Raleway-Bold.ttf",
       weight: "700",
     },
     {
-      path: "../public/fonts/open-sans/OpenSans-Semibold.ttf",
+      path: "../public/fonts/raleway/Raleway-SemiBold.ttf",
+      weight: "600",
+    },
+    {
+      path: "../public/fonts/raleway/Raleway-Medium.ttf",
       weight: "500",
     },
     {
-      path: "../public/fonts/open-sans/OpenSans-Regular.ttf",
+      path: "../public/fonts/raleway/Raleway-Regular.ttf",
       weight: "400",
     },
     {
-      path: "../public/fonts/open-sans/OpenSans-Light.ttf",
+      path: "../public/fonts/raleway/Raleway-Thin.ttf",
       weight: "300",
     },
+    {
+      path: "../public/fonts/raleway/Raleway-ExtraLight.ttf",
+      weight: "200",
+    },
   ],
-  variable: "--font-open_sans",
+  variable: "--font-raleway",
 });

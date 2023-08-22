@@ -31,7 +31,7 @@ const Mobile = () => {
               <ActionButton icon="close" onclick={toggleNav} />
             </div>
             <div className="mt-[3rem] font-sans">
-              <ul className="flex gap-8 flex-col font-light">
+              <ul className="flex gap-8 flex-col font-regular">
                 <Link
                   onClick={toggleNav}
                   className="text-sm text-gray-600 tracking-wider hover:text-gray-2 transition-all ease-in"

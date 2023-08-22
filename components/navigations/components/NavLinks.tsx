@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const NavLinks = () => {
   return (
-    <ul className="flex justify-center items-center gap-[2.5rem] font-light">
+    <ul className="flex justify-center items-center gap-[2.5rem] font-regular">
       <li>
         <Link
           href={"/shop"}

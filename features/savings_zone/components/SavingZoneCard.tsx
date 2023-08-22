@@ -12,7 +12,7 @@ export interface ZoneCardProps {
 }
 type Direction = "left" | "right";
 type Orientation = "portrait" | "landscape";
-type TextColor = "black" | "light";
+type TextColor = "black" | "regular";
 
 const SavingZoneCard: React.FC<ZoneCardProps> = ({
   orientation,
@@ -46,7 +46,7 @@ const SavingZoneCard: React.FC<ZoneCardProps> = ({
                 <h2 className="text-xl md:text-2xl xl:text-3xl font-normal font-sans">
                   {title}
                 </h2>
-                <p className="text-sm lg:text-md font-light">{subtitle}</p>
+                <p className="text-sm lg:text-md font-regular">{subtitle}</p>
                 <p className="text-md lg:text-lg xl:text-xl font-bold font-sans">
                   Flat {discount}% off
                 </p>
@@ -56,8 +56,8 @@ const SavingZoneCard: React.FC<ZoneCardProps> = ({
                 >
                   <button
                     className={`rounded-sm px-[2rem] py-[0.5rem] border ${
-                      color === "light" ? "border-light" : "border-black"
-                    } hover:shadow-xl text-sm font-light`}
+                      color === "regular" ? "border-regular" : "border-black"
+                    } hover:shadow-xl text-sm font-regular`}
                   >
                     Shop now
                   </button>
@@ -88,18 +88,18 @@ const SavingZoneCard: React.FC<ZoneCardProps> = ({
                 <h2 className="text-lg md:text-2xl xl:text-3xl font-normal font-sans">
                   {title}
                 </h2>
-                <p className="text-sm lg:text-md font-light">{subtitle}</p>
+                <p className="text-sm lg:text-md font-regular">{subtitle}</p>
                 <p className="text-base lg:text-lg xl:text-xl font-bold font-sans">
                   Up to {discount}% off
                 </p>
                 <Link
-                  href="/shirts"
+                  href="/categories/shirts"
                   className="text-md lg:text-lg xl:text-xl font-bold underline mt-3"
                 >
                   <button
                     className={`rounded-sm px-[2rem] py-[0.5rem] border ${
-                      color === "light" ? "border-light" : "border-black"
-                    } hover:shadow-xl text-sm font-light`}
+                      color === "regular" ? "border-regular" : "border-black"
+                    } hover:shadow-xl text-sm font-regular`}
                   >
                     Shop now
                   </button>

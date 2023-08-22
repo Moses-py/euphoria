@@ -29,32 +29,32 @@ const CartItem = ({ item }: CartItemProps) => {
                 <p className="text-md xs:text-md w-full text-primary font-bold">
                   {cartItem!.name}
                 </p>
-                <p className="text-primary text-sm font-light">
+                <p className="text-primary text-sm font-regular">
                   <span className="font-semibold">Color:</span>{" "}
                   {cartItem!.selectedColor}
                 </p>
-                <p className="text-primary text-sm font-light">
+                <p className="text-primary text-sm font-regular">
                   <span className="font-semibold">Size:</span>{" "}
                   {cartItem!.selectedSize}
                 </p>
-                <p className="block lg:hidden text-primary text-sm font-light">
+                <p className="block lg:hidden text-primary text-sm font-regular">
                   <span className="font-semibold">Price:</span> $
                   {cartItem!.price}
                 </p>
                 {/* Other */}
                 <ul className="flex xs:hidden flex-col gap-3 xs:gap-2 text-light text-left">
-                  <li className="text-primary text-sm font-light">
+                  <li className="text-primary text-sm font-regular">
                     <span className="font-semibold">Shipping: </span>$
                     {cartItem!.shipping.toFixed(2)}
                   </li>
-                  <li className="text-primary text-sm font-light">
+                  <li className="text-primary text-sm font-regular">
                     <span className="font-semibold">Subtotal:</span> $
                     {(
                       parseFloat(cartItem!.price) * item.length +
                       cartItem!.shipping
                     ).toFixed(2)}
                   </li>
-                  <li className="text-primary text-sm font-light float-left  xs:mt-0">
+                  <li className="text-primary text-sm font-regular float-left  xs:mt-0">
                     <Quantity
                       count={item.length}
                       minusOnclick={() => updateCart(cartItem!, "remove")}
@@ -67,18 +67,18 @@ const CartItem = ({ item }: CartItemProps) => {
           </div>
           {/* Mobile */}
           <ul className="xs:flex hidden lg:hidden flex-col gap-3 xs:gap-2 text-light text-center xs:text-right">
-            <li className="text-primary text-sm font-light">
+            <li className="text-primary text-sm font-regular">
               <span className="font-semibold">Shipping: </span> $
               {cartItem!.shipping.toFixed(2)}
             </li>
-            <li className="text-primary text-sm font-light">
+            <li className="text-primary text-sm font-regular">
               <span className="font-semibold">Subtotal:</span> $
               {(
                 parseFloat(cartItem!.price) * item.length +
                 cartItem!.shipping
               ).toFixed(2)}
             </li>
-            <li className="text-primary text-sm font-light float-left mt-[1rem] xs:mt-0">
+            <li className="text-primary text-sm font-regular float-left mt-[1rem] xs:mt-0">
               <Quantity
                 count={item.length}
                 minusOnclick={() => updateCart(cartItem!, "remove")}
@@ -88,20 +88,20 @@ const CartItem = ({ item }: CartItemProps) => {
           </ul>
           {/* Desktop */}
           <ul className="hidden lg:flex justify-between items-center list-none flex-initial lg:flex-1 gap-[1.5rem] px-5 text-light uppercase">
-            <li className="text-primary text-sm font-light">
+            <li className="text-primary text-sm font-regular">
               ${cartItem!.price}
             </li>
-            <li className="text-primary text-sm font-light">
+            <li className="text-primary text-sm font-regular">
               <Quantity
                 count={item.length}
                 minusOnclick={() => updateCart(cartItem!, "remove")}
                 plusOnclick={() => updateCart(cartItem!, "add")}
               />
             </li>
-            <li className="text-primary text-sm font-light">
+            <li className="text-primary text-sm font-regular">
               ${cartItem!.shipping.toFixed(2)}
             </li>
-            <li className="text-primary text-sm font-light">
+            <li className="text-primary text-sm font-regular">
               $
               {(
                 parseFloat(cartItem!.price) * item.length +

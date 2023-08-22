@@ -1,6 +1,4 @@
 import Button from "@/components/button/Button";
-import H3 from "@/components/typography/H3";
-import P from "@/components/typography/P";
 import formatCustomDate from "@/utils/formatDate";
 import Image from "next/image";
 import Link from "next/link";
