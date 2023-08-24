@@ -1,11 +1,11 @@
-import { HTMLInputTypeAttribute } from "react";
+import { ChangeEvent, HTMLInputTypeAttribute } from "react";
 
 interface InputProps {
   label?: string;
   required: boolean;
   placeholder: string;
   type?: HTMLInputTypeAttribute;
-  onchange?: () => void;
+  onchange?: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
   classname?: string;
   variant: Variant;
   value?: string;

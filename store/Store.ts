@@ -24,7 +24,7 @@ interface Store {
   wishlist: ProductItemSummary[];
   updateWishlist: (item: ProductItemSummary, command: WishlistCommand) => void;
   user: User;
-  loginUser: (data: User) => void;
+  loginUser: (data: Pick<User, "name" | "password">) => void;
   orders: Orders[];
   setOrders: (order: Orders) => void;
   cancelOrder: (orderID: string) => void;
@@ -80,10 +80,9 @@ export const useStore = create<Store>((set, get) => ({
     set({ wishlist: updateWishlistCollection(currentWishList, item, command) });
   },
   user: {
-    name: "Moses Chukwunekwu",
-    password: "devilwillcry1",
-    userId: "ds084r30uj3m",
-    phonenumber: "09069885063",
+    name: "",
+    password: "",
+    phonenumber: "+1234567890",
     address: [
       {
         role: "default",
@@ -97,11 +96,31 @@ export const useStore = create<Store>((set, get) => ({
         },
       },
     ],
+    userId: "",
     orders: [],
   },
-  loginUser: (data: User) => {
+  loginUser: (data: Pick<User, "name" | "password">) => {
     const userId = generateRandomString(20);
-    set({ user: { ...data, userId } });
+    const userData: User = {
+      ...data,
+      phonenumber: "+1234567890",
+      address: [
+        {
+          role: "default",
+          addressData: {
+            streetNumber: "08",
+            streetname: "Okey Eze street",
+            city: "Ipaja",
+            country: "Nigeria",
+            zipcode: "100234",
+            state: "Lagos",
+          },
+        },
+      ],
+      userId,
+      orders: [],
+    };
+    set({ user: { ...userData, userId } });
   },
   orders: [],
   setOrders: (order: Orders) => {
